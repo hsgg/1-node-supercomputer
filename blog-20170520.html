@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to my Super Pi Webserver!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Look, it works!</h1>
+<p>
+So, here is my new and shiny webserver! It runs on a NanoPi NEO development
+board with the nginx webserver. I'm still figuring out how to configure it.
+</p>
+<p>
+Currently, the biggest problem is that whenever the DHCP lease expires, and the
+device gets a new one, it cannot set a route for the connection anymore. To
+debug it, I've written a udev rule to restart the board whenever I insert a USB
+stick from whatever the vendor and product IDs are.
+</p>
+</p>
+Well, actually, I've modified my script to just restart the network connection
+using network manager. Hopefully that will be sufficient.
+</p>
+</p>
+The next lease renewal is due quarter to midnight. I can't wait!
+<p>
+</body>
+</html>
