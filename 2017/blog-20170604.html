@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to my Super Pi Webserver!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Installing Mathematica 11 on Archlinux</h1>
+<p>
+So I finally decided to buy <tt>Mathematica 11</tt> at the student price
+through my university. When it comes to indefinite integrals, I've found
+<tt>Mathematica</tt> to be more reliable than my favorite opensource CAD,
+<tt>SymPy</tt>. (Yeah, there are others I haven't tried sufficiently, yet...)
+</p>
+<p>
+So, anyway... I got it, so now I gotta install it on my archlinux laptop, right?
+</p>
+<p>
+Thankfully, there is an AUR package for Mathematia. I use <tt>yaourt</tt> as a
+frontend to AUR. Since Mathematica is a large package, yaourt needs to be
+instructed to use a temporary directory that is on disk, not tmpfs mounted. I
+do this:
+<blockquote>
+<code>$ TMPDIR=/var/tmp yaourt -S mathematica</code>
+</blockquote>
+Then, edit the PKGBUILD file so as not to install all the documentation, since
+I use the web most of the time anyway. Sure, I may sometimes get in trouble
+without internet. Whatever.
+
+While editing the PKGBUILD, it is also important to copy over the Mathematica
+install file. Since I use VIM, I do <tt>:shell</tt>, and create a symlink
+<blockquote>
+<code>
+$ ln -s /path/to/Mathematica_11.1.1_Install.sh
+</code>
+</blockquote>
+After exiting the install, just need to say yes a few times, and let the
+scripts do their work.
+</p>
+</body>
+</html>
