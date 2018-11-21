@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to my Super Pi Webserver!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Word-wise git diff, number-wise git diff</h1>
+
+<p>
+Ah, one of those gems that make your life easier. Git allows you to do a
+word-by-word diff, and you don't need to use a special tool for it:
+<blockquote><tt>
+$ git diff --word-diff
+</tt></blockquote>
+This will show the old word in red, the new replacement in green, if color is
+enabled.
+</p>
+
+<p>
+For number comparison it is better to reduce the amount difference even further:
+<blockquote><tt>
+$ git diff --word-diff-regex=.
+</tt></blockquote>
+This will show the difference character-by-character, which is pretty much what
+you want when comparing numbers, and you expect only changes of order machine
+precision.
+</p>
+
+<p>
+Of course, it doesn't parse numbers, e.g. <tt>168898766763e-21</tt> is not
+automatically matched with <tt>1.68898766763e-5</tt> (or whatever it is).
+Nevertheless, still an improvement over the full number.
+</p>
+
+</body>
+</html>
