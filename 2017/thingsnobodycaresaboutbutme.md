@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to my Super Pi Webserver!</title>
-<style>
-    body {
-        width: 35em;
-        margin: 0 auto;
-        font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-</style>
-</head>
-<body>
-<h1>Random links</h1>
+# Random links
+
 <p><a href="http://www.super-physik.de">www.suppen-physik.de</a>
 (Dieser Link tut, also werde ich ja wohl keinen Schreibfehler gemacht
 haben!)</p>
@@ -27,21 +15,3 @@ haben!)</p>
 <p><a href="http://www.osmotic-studios.com/games/">Orwell</a></p>
 <p><a href="http://www.faz.net/aktuell/generation-plastik/">Generation Plastik</a></p>
 <p><a href="https://www.nytimes.com/2018/09/01/opinion/sunday/how-make-big-decision.html">Making Big Decisions: Consider alternatives</a></p>
-</body>
-
-<style>
-	.bottom-three {
-		margin-bottom: 5cm;
-	}
-</style>
-
-<p class="bottom-three">
-<div id="footer">
-<em>
-Home:</br>
-<a href="http://1-node-supercomputer.strangled.net">1-node-supercomputer.strangled.net</a></br>
-<a href="http://2-node-supercomputer.spacetechnology.net">2-node-supercomputer.spacetechnology.net</a><br/>
-</em>
-</div>
-</p>
-</html>
