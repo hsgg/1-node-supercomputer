@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    body {
+        max-width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+
+<body>
+<h1>Fahrenheit to Celsius Converter</h1>
+
+<script language="JavaScript">
+<!-- hide this script from old browsers
+function temp(form)
+{
+  var f = parseFloat(form.DegF.value, 10);
+  var c = 0;
+  c = (f - 32.0) * 5.0 / 9.0;
+  form.DegC.value = c;
+}
+// done hiding from old browsers -->
+</script>
+
+<p>
+<FORM>
+Enter a temperature in degrees F:
+<INPUT NAME="DegF" VALUE="0" MAXLENGTH="15" SIZE=15>
+<p>
+Click this button to calculate the temperature 
+in degrees C:
+<INPUT NAME="calc" VALUE="Calculate" TYPE=BUTTON onClick=temp(this.form)>
+<p>
+Temperature in degrees C is: 
+<INPUT NAME="DegC" READONLY SIZE=15>
+</FORM>
+</p>
+
+<p>(This demo is copied from
+<a href="https://computer.howstuffworks.com/javascript.htm">https://computer.howstuffworks.com/javascript.htm</a>.)</p>
+
+</body>
+<footer>
+<style>
+	.bottom-three {
+		margin-bottom: 5cm;
+	}
+</style>
+<p class="bottom-three">
+<div id="footer">
+<em>
+<a href="http://freedns.afraid.org/">Free DNS</a></br>
+<a href="http://1-node-supercomputer.strangled.net">1-node-supercomputer.strangled.net</a></br>
+<a href="http://2-node-supercomputer.spacetechnology.net">2-node-supercomputer.spacetechnology.net</a><br/>
+<a href="https://www.hover.com/">hover.com</a><br/>
+<a href="https://www.a2hosting.com/vps-hosting/unmanaged">a2hosting.com</a><br/>
+</em>
+</div>
+</p>
+</footer>
+
+
+</html>

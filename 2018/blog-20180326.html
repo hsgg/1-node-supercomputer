@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    body {
+        max-width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+
+<body>
+<h1>Using Apple's SuperDrive with Archlinux</h1>
+
+<p>Apple doesn't like to play nice with others. Their SuperDrive is no exception.</p>
+
+<p>However, by sending some magic numbers to the drive you can make it <a
+href="https://christianmoser.me/use-apples-usb-superdrive-with-linux/">work</a>.
+You need the package <tt>sg3_utils</tt>. Then send the magic byte sequence to
+the drive:</p>
+
+<pre><code>$ sg_raw /dev/sr0 EA 00 00 00 00 00 01
+</code></pre>
+
+<p>That's it! The aforementioned link also contain instructions on how to automate
+the command using <tt>udev</tt> rules, if you're into that.</p>
+
+</body>
+<footer>
+<style>
+	.bottom-three {
+		margin-bottom: 5cm;
+	}
+</style>
+<p class="bottom-three">
+<div id="footer">
+<em>
+<a href="http://freedns.afraid.org/">Free DNS</a></br>
+<a href="http://1-node-supercomputer.strangled.net">1-node-supercomputer.strangled.net</a></br>
+<a href="http://2-node-supercomputer.spacetechnology.net">2-node-supercomputer.spacetechnology.net</a><br/>
+<a href="https://www.hover.com/">hover.com</a><br/>
+<a href="https://www.a2hosting.com/vps-hosting/unmanaged">a2hosting.com</a><br/>
+</em>
+</div>
+</p>
+</footer>
+
+
+</html>

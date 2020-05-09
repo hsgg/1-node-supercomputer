@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    body {
+        max-width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+
+<body>
+<h1>Installing Mathematica 11 on Archlinux</h1>
+
+<p>So I finally decided to buy <code>Mathematica 11</code> at the student price
+through my university. When it comes to indefinite integrals, I've found
+<code>Mathematica</code> to be more reliable than my favorite opensource CAD,
+<code>SymPy</code>. (Yeah, there are others I haven't tried sufficiently, yet...)</p>
+
+<p>So, anyway... I got it, so now I gotta install it on my archlinux laptop, right?</p>
+
+<p>Thankfully, there is an AUR package for Mathematia. I use <code>yaourt</code> as a
+frontend to AUR. Since Mathematica is a large package, yaourt needs to be
+instructed to use a temporary directory that is on disk, not tmpfs mounted. I
+do this:</p>
+
+<pre><code>$ TMPDIR=/var/tmp yaourt -S mathematica
+</code></pre>
+
+<p>Then, edit the PKGBUILD file so as not to install all the documentation, since
+I use the web most of the time anyway. Sure, I may sometimes get in trouble
+without internet. Whatever.</p>
+
+<p>While editing the PKGBUILD, it is also important to copy over the Mathematica
+install file. Since I use VIM, I do <code>:shell</code>, and create a symlink</p>
+
+<pre><code>$ ln -s /path/to/Mathematica_11.1.1_Install.sh
+</code></pre>
+
+<p>After exiting the install, just need to say yes a few times, and let the
+scripts do their work.</p>
+
+</body>
+<footer>
+<style>
+	.bottom-three {
+		margin-bottom: 5cm;
+	}
+</style>
+<p class="bottom-three">
+<div id="footer">
+<em>
+<a href="http://freedns.afraid.org/">Free DNS</a></br>
+<a href="http://1-node-supercomputer.strangled.net">1-node-supercomputer.strangled.net</a></br>
+<a href="http://2-node-supercomputer.spacetechnology.net">2-node-supercomputer.spacetechnology.net</a><br/>
+<a href="https://www.hover.com/">hover.com</a><br/>
+<a href="https://www.a2hosting.com/vps-hosting/unmanaged">a2hosting.com</a><br/>
+</em>
+</div>
+</p>
+</footer>
+
+
+</html>

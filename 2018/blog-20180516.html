@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    body {
+        max-width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+
+<body>
+<h1>Compiling Evince on Archlinux</h1>
+
+<p>So, took me a while to figure out why <i>Evince</i> wouldn't compile.
+<tt>autogen.sh</tt> gave me an error:</p>
+
+<pre><code>error: HAVE_INTROSPECTION does not appear in AM_CONDITIONAL
+</code></pre>
+
+<p>To solve it, install the package <tt>gobject-introspectiron</tt>. Yes, you need
+that package even if you are compiling <i>Evince</i> without GObject
+introspectrion support.</p>
+
+</body>
+<footer>
+<style>
+	.bottom-three {
+		margin-bottom: 5cm;
+	}
+</style>
+<p class="bottom-three">
+<div id="footer">
+<em>
+<a href="http://freedns.afraid.org/">Free DNS</a></br>
+<a href="http://1-node-supercomputer.strangled.net">1-node-supercomputer.strangled.net</a></br>
+<a href="http://2-node-supercomputer.spacetechnology.net">2-node-supercomputer.spacetechnology.net</a><br/>
+<a href="https://www.hover.com/">hover.com</a><br/>
+<a href="https://www.a2hosting.com/vps-hosting/unmanaged">a2hosting.com</a><br/>
+</em>
+</div>
+</p>
+</footer>
+
+
+</html>
