@@ -63,8 +63,8 @@ def main():
         writefile(htmlfile, html)
 
     # generate index.html
-    indexpre = markdown_path("snippets/index-pre.html")
-    toc = ""
+    indexpre = markdown_path("../2020/index.md")
+    toc = "Contents:\n"
     for mdfile in mdfiles:
         htmlfile = path_md2html(mdfile)
         date = mdfile[13:-3]

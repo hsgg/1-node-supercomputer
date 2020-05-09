@@ -5,5 +5,3 @@ server, and a space for my ramblings.
 Further configuration is required. Also, Shue is awesome.
 
 I'm running apache2 now.
-
-Contents:
