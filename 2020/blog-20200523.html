@@ -69,15 +69,18 @@ account. (I first was looking into recovering the Windows product key from my
 Windows 10 disk image that I preserved before I put Linux on my laptop, but
 perhaps more luck with that some other time.)</p>
 
-<p>To be quick, I basically followed the Gentoo wiki on creating a Windows hosting
-with QEMU. Get the virtio drivers from Fedora/Red Hat, and download a Windows
-installation ISO from Microsoft. To make it work, I needed to enable KVM in the
-BIOS of my laptop first.</p>
+<p>With going into the details, here is what I did. Basically, I followed the
+<a href="https://wiki.gentoo.org/wiki/QEMU/Windows_guest">Gentoo wiki</a> on creating a
+Windows hosting with QEMU. Get the virtio drivers from Fedora/Red Hat, and
+download a Windows installation ISO from Microsoft. To make it work, I needed
+to enable KVM in the BIOS of my laptop first.</p>
 
-<p>Then, pass-through the USB device with the vendor and product key as above to
-the VM, which was shown in the Archlinux wiki on QEMU. However, to run the VM
-as a normal user, I created a UDEV rule to change the OWNER and GROUP of the
-USB device.</p>
+<p>Then, pass-through the USB device to the VM with the vendor and product key as
+above, which was shown in the <a href="https://wiki.archlinux.org/index.php/QEMU#Pass-through_host_USB_device">Archlinux
+wiki</a>
+on QEMU. However, to run the VM as a normal user, I created a UDEV rule to
+change the OWNER and GROUP of the USB device, again see the <a href="https://wiki.archlinux.org/index.php/Udev#About_udev_rules">Arch
+wiki</a>.</p>
 
 <p>Finally, the VM can be started up, and the Media Tool provided by Tribit can be
 used to update the firmware. Boom, done! Audio still lags, but only maybe 0.2
@@ -88,6 +91,9 @@ there is no noticeable lag. So, it is definitely related to bluetooth. However,
 you would expect there to be some mechanism for a device to specify its lag,
 perhaps dynamically depending on interference. Does the bluetooth protocal
 allow that?</p>
+
+<p>Turns out, yes, it does. It is called A/V sync, and has been around for awhile.
+However, bluetooth 5.0 seems to fix some remaining issues with it.</p>
 
 </body>
 <footer>
