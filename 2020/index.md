@@ -2,6 +2,5 @@
 
 Nothing fancy here, yet. This is mostly for testing, learning how to run a
 server, and a space for my ramblings.
-Further configuration is required. Also, Shue is awesome.
 
-I'm running apache2 now.
+And it isn't really a 2-node thing anymore. But the name sticks.
