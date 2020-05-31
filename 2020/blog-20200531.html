@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    html {
+        max-width: 35em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1em;
+        padding-right: 1em;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+    footer {
+        width: calc(100% - 3em);
+        max-width: calc(35em - 3em);
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<h1>Julia's Hermitian transpose operator</h1>
+
+<p>In <code>Julia</code> the so-called transpose operator does a little more than I expected:</p>
+
+<pre><code>&gt; [1+im]'
+[1-im]
+</code></pre>
+
+<p>That is, it is the Hermitian operator, frequently abbreviated as a dagger, †. </p>
+
+<p>That means that <code>A' = conj(transpose(A))</code>.</p>
+
+<p>It took me awhile to figure that out. I had always assumed that <code>'</code> is just the
+transpose, not taking the complex conjugate. Phew, finally found that.</p>
+
+<p>Does it make sense? Yes, i think so. That is exactly what you will usually
+want. Perhaps it would have been nice to use the symbol †, for clarity.</p>
+
+</body>
+<footer>
+<p>
+<em>
+<!--<a href="http://freedns.afraid.org/">Free DNS</a></br>-->
+<!--<a href="http://1-node-supercomputer.strangled.net">1-node-supercomputer.strangled.net</a></br>-->
+<!--<a href="http://2-node-supercomputer.spacetechnology.net">2-node-supercomputer.spacetechnology.net</a><br/>-->
+<a href="http://2-node-supercomputer.net">2-node-supercomputer.net</a><br/>
+<!--<a href="../2020/index.html">2-node-supercomputer.net</a><br/>-->
+<!--<a href="https://www.hover.com/">hover.com</a><br/>-->
+<!--<a href="https://www.a2hosting.com/vps-hosting/unmanaged">a2hosting.com</a><br/>-->
+</em>
+</p>
+</footer>
+
+
+</html>
