@@ -54,6 +54,25 @@ def path_md2html(mdfile):
     return htmlfile
 
 
+def mdfile_date(mdfile, postfix=""):
+    date = mdfile[13:-3]
+    title = date[:4] + "-" + date[4:6] + "-" + date[6:]
+    if len(title) != 10:
+        title = ""
+    else:
+        title += postfix
+    return title
+
+
+def encapsulate(env, content, **properties):
+    prop = ""
+    for p in properties:
+        prop += " "
+        prop += p + "=" + properties[p]
+    s = "<" + env + prop + ">" + content + "</" + env + ">"
+    return s
+
+
 def main():
     head = readfile("snippets/head.html")
     footer = readfile("snippets/footer.html")
@@ -62,7 +81,9 @@ def main():
     for mdfile in mdfiles:
         htmlfile = path_md2html(mdfile)
         print("Converting", mdfile, "->", htmlfile, "...")
-        body = "\n".join(["<body>", markdown_path(mdfile), "</body>"])
+        date = mdfile_date(mdfile)
+        date = encapsulate("p", date, style="text-align:right;")
+        body = "\n".join(["<body>", date, markdown_path(mdfile), "</body>"])
         html = "\n".join([top, head, body, footer, bottom])
         writefile(htmlfile, html)
 
@@ -71,11 +92,7 @@ def main():
     toc = "Contents:\n"
     for mdfile in mdfiles:
         htmlfile = path_md2html(mdfile)
-        date = mdfile[13:-3]
-        title = date[:4] + "-" + date[4:6] + "-" + date[6:] + ": "
-        if len(title) != 12:
-            title = ""
-        title += readfirstline(mdfile)[2:-1]
+        title = mdfile_date(mdfile, ": ") + readfirstline(mdfile)[2:-1]
         print(title)
         toc += "\n  - [" + title + "](" + htmlfile + ")"
     # other entries
