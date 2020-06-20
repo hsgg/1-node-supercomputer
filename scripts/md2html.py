@@ -3,6 +3,8 @@
 import os
 from markdown2 import markdown, markdown_path
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 top = """<!DOCTYPE html>
 <html>
 """
