@@ -75,16 +75,19 @@ def encapsulate(env, content, **properties):
 
 def main():
     head = readfile("snippets/head.html")
-    footer = readfile("snippets/footer.html")
 
     # convert md files to html
     for mdfile in mdfiles:
         htmlfile = path_md2html(mdfile)
         print("Converting", mdfile, "->", htmlfile, "...")
         date = mdfile_date(mdfile)
-        date = encapsulate("p", date, style="text-align:right;")
-        body = "\n".join(["<body>", date, markdown_path(mdfile), "</body>"])
-        html = "\n".join([top, head, body, footer, bottom])
+        date = encapsulate("span", date, style="float:right;")
+        home = encapsulate("a", "2-node-supercomputer.net", href="http://2-node-supercomputer.net")
+        home = encapsulate("em", home)
+        banner = encapsulate("p", home + "\n" + date, style="text-align:left;")
+        footer = encapsulate("footer", banner)
+        body = "\n".join(["<body>", banner + "\n", markdown_path(mdfile), "</body>"])
+        html = "\n".join([top, head, body, "\n", footer, bottom])
         writefile(htmlfile, html)
 
     # generate index.html
