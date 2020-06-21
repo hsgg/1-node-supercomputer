@@ -28,6 +28,7 @@ mdfiles = [
         "../2020/blog-20200426.md",
         "../2020/blog-20200523.md",
         "../2020/blog-20200531.md",
+        "../2020/blog-20200621.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
