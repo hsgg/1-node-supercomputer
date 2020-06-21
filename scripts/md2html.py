@@ -102,6 +102,10 @@ def main():
     toc += "\n  - [Shue's blog](../2018/shuesblog/)"
     print("Shue's blog")
     toc = markdown(toc)
+    footer = encapsulate("a", "2-node-supercomputer.net", href="http://2-node-supercomputer.net")
+    footer = encapsulate("em", footer)
+    footer = encapsulate("p", footer, style="text-align:center;")
+    footer = encapsulate("footer", footer)
     html = "\n".join([top, head, "<body>", indexpre, toc, "</body>", footer, bottom])
     writefile("../2020/index.html", html)
 
