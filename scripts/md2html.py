@@ -57,13 +57,16 @@ def path_md2html(mdfile):
 
 
 def mdfile_date(mdfile, postfix=""):
-    date = mdfile[13:-3]
-    title = date[:4] + "-" + date[4:6] + "-" + date[6:]
-    if len(title) != 10:
-        title = ""
+    fname = os.path.splitext(os.path.basename(mdfile))[0]
+    s = fname.split('-')
+    if len(s) < 2:
+        return ""
+    date = s[1]
+    date = date[:4] + "-" + date[4:6] + "-" + date[6:]
+    if len(date) != 10:
+        return ""
     else:
-        title += postfix
-    return title
+        return date + postfix
 
 
 def encapsulate(env, content, **properties):
