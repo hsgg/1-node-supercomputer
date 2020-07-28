@@ -31,6 +31,7 @@ mdfiles = [
         "../2020/blog-20200621.md",
         "../2020/blog-20200704.md",
         "../2020/blog-20200713-is-the-US-outspending-itself.md",
+        "../2026/blog-20200724-future-mars-boarding-pass.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
