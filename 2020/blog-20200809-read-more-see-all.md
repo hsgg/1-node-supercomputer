@@ -9,7 +9,7 @@ boring rant about some internet
 annoying. Nothing more. </span>
 
 <span id="readmore1"> Arguably the most annoying offender is [Audio
-Technica](www.audio-technica.com). On any given product page, not just do you
+Technica](https://www.audio-technica.com). On any given product page, not just do you
 have to click to expand the *Specifications* details. No, once you did that,
 you also have to click a *See all* button to actually see enough of the
 specifications to be of any use.</span>
