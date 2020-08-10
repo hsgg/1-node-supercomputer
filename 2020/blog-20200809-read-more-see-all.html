@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    html {
+        max-width: 35em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1em;
+        padding-right: 1em;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    footer {
+        padding-top: 1em;
+        bottom: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2020-08-09</span></p>
+
+<h1>Read more</h1>
+
+<p>Isn't it annoying that on just about every website nowadays you have to click
+the<span id="dots">...</span> <span onclick="ToggleState()" id="myBtn"
+style="color:blue;cursor:pointer"><em>Read more</em></span> <span
+id="readmore0">button? Just to see what comes next? It turns out to be just a
+boring rant about some internet
+<a href="https://en.wikipedia.org/wiki/User_experience">UX</a> fad that is really
+annoying. Nothing more. </span></p>
+
+<p><span id="readmore1"> Arguably the most annoying offender is <a href="www.audio-technica.com">Audio
+Technica</a>. On any given product page, not just do you
+have to click to expand the <em>Specifications</em> details. No, once you did that,
+you also have to click a <em>See all</em> button to actually see enough of the
+specifications to be of any use.</span></p>
+
+<p><span id="readmore2">
+Why? Why, Audio Technica? What went wrong that you
+implemented such an annoying feature? And where is the datasheet for the
+product? Why is it hidden? Where is it hidden? Why I can I find a datasheet for
+only half your products, and only by searching with Google or Duckduckgo.
+</span></p>
+
+<p><span id="readmore3">
+Such <a href="">Read all</a> expanding link-looking buttons have been around for a while,
+and they are one of the most annoying features of online shopping. What went
+wrong in the UX departments to invent and keep around such nonsense?
+</span></p>
+
+<p><span id="readmore4">
+Showing walls of text is appalling to customers. So the obvious solution would
+be to create useful and concise descriptions.
+</span></p>
+
+<p><span id="readmore5">
+Is that what just about any online shop is doing? No. Instead, they just hide
+the poorly written and overly lengthy descriptions! Ah, that must be the
+explanation.
+</span></p>
+
+<p><span id="readmore6">
+    &lt; / rant &gt;
+</span></p>
+
+<script language="JavaScript">
+<!-- hide this script from old browsers
+function ReadMoreChanger(newstate)
+{
+  var dots = document.getElementById("dots")
+  var btnText = document.getElementById("myBtn")
+  var moreText0 = document.getElementById("readmore0")
+  var moreText1 = document.getElementById("readmore1")
+  var moreText2 = document.getElementById("readmore2")
+  var moreText3 = document.getElementById("readmore3")
+  var moreText4 = document.getElementById("readmore4")
+  var moreText5 = document.getElementById("readmore5")
+  var moreText6 = document.getElementById("readmore6")
+
+  if (newstate === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "<em>Read more</em>";
+    moreText0.style.display = "none";
+    moreText1.style.display = "none";
+    moreText2.style.display = "none";
+    moreText3.style.display = "none";
+    moreText4.style.display = "none";
+    moreText5.style.display = "none";
+    moreText6.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "<em>read less</em>";
+    moreText0.style.display = "inline";
+    moreText1.style.display = "inline";
+    moreText2.style.display = "inline";
+    moreText3.style.display = "inline";
+    moreText4.style.display = "inline";
+    moreText5.style.display = "inline";
+    moreText6.style.display = "inline";
+  }
+}
+function ToggleState() {
+  var dots = document.getElementById("dots")
+  if (dots.style.display === "none") {
+    ReadMoreChanger("none");
+  } else {
+    ReadMoreChanger("inline");
+  }
+}
+function InitState() {
+  ReadMoreChanger("none")
+}
+window.onload = InitState;
+// done hiding from old browsers -->
+</script>
+
+</body>
+
+
+<footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2020-08-09</span></p></footer>
+
+</html>

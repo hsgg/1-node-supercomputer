@@ -34,6 +34,7 @@ mdfiles = [
         "../2026/blog-20200724-future-mars-boarding-pass.md",
         "../2020/blog-20200728-cpu-operation-costs.md",
         "../2020/blog-20200731-gdb-signals.md",
+        "../2020/blog-20200809-read-more-see-all.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
