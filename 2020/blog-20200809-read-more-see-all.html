@@ -77,6 +77,13 @@ the poorly written and overly lengthy descriptions! Ah, that must be the
 explanation.
 </span></p>
 
+<p><span id="readmore5.8">
+The</span><span id="dots3">...</span> <span id="myBtn3"
+onclick="ToggleState3()" style="color:blue;cursor:pointer"><em>Read
+more</em></span><span id="readmore5.9"> button is especially annoying when
+there is not much more to read.
+</span></p>
+
 <p><span id="readmore6">
     &lt; / rant &gt;
 </span></p>
@@ -87,8 +94,10 @@ function ReadMoreChanger(newstate)
 {
   var dots = document.getElementById("dots")
   var dots2 = document.getElementById("dots2")
+  var dots3 = document.getElementById("dots3")
   var btnText = document.getElementById("myBtn")
   var btnText2 = document.getElementById("myBtn2")
+  var btnText3 = document.getElementById("myBtn3")
   var moreText0 = document.getElementById("readmore0")
   var moreText1 = document.getElementById("readmore1")
   var moreText11 = document.getElementById("readmore1.1")
@@ -96,13 +105,17 @@ function ReadMoreChanger(newstate)
   var moreText3 = document.getElementById("readmore3")
   var moreText4 = document.getElementById("readmore4")
   var moreText5 = document.getElementById("readmore5")
+  var moreText58 = document.getElementById("readmore5.8")
+  var moreText59 = document.getElementById("readmore5.9")
   var moreText6 = document.getElementById("readmore6")
 
-  if (newstate === "none") {
+  if (newstate === "first") {
     dots.style.display = "inline";
     dots2.style.display = "none";
+    dots3.style.display = "none";
     btnText.innerHTML = "<em>Read more</em>";
     btnText2.style.display = "none";
+    btnText3.style.display = "none";
     moreText0.style.display = "none";
     moreText1.style.display = "none";
     moreText11.style.display = "none";
@@ -110,13 +123,17 @@ function ReadMoreChanger(newstate)
     moreText3.style.display = "none";
     moreText4.style.display = "none";
     moreText5.style.display = "none";
+    moreText58.style.display = "none";
+    moreText59.style.display = "none";
     moreText6.style.display = "none";
-  } else if (newstate === "first") {
+  } else if (newstate === "second") {
     dots.style.display = "none";
     dots2.style.display = "inline";
+    dots3.style.display = "none";
     btnText.innerHTML = "<em>read less</em>";
     btnText2.style.display = "inline";
     btnText2.innerHTML = "<em>See all</em>";
+    btnText3.style.display = "none";
     moreText0.style.display = "inline";
     moreText1.style.display = "inline";
     moreText11.style.display = "none";
@@ -124,13 +141,18 @@ function ReadMoreChanger(newstate)
     moreText3.style.display = "none";
     moreText4.style.display = "none";
     moreText5.style.display = "none";
+    moreText58.style.display = "none";
+    moreText59.style.display = "none";
     moreText6.style.display = "none";
-  } else {
+  } else if (newstate === "third") {
     dots.style.display = "none";
     dots2.style.display = "none";
+    dots3.style.display = "inline";
     btnText.innerHTML = "<em>read less</em>";
     btnText2.style.display = "inline";
     btnText2.innerHTML = "<em>see less</em>";
+    btnText3.style.display = "inline";
+    btnText3.innerHTML = "<em>Read more</em>";
     moreText0.style.display = "inline";
     moreText1.style.display = "inline";
     moreText11.style.display = "inline";
@@ -138,30 +160,71 @@ function ReadMoreChanger(newstate)
     moreText3.style.display = "inline";
     moreText4.style.display = "inline";
     moreText5.style.display = "inline";
+    moreText58.style.display = "inline";
+    moreText59.style.display = "none";
+    moreText6.style.display = "none";
+  } else { // see all
+    dots.style.display = "none";
+    dots2.style.display = "none";
+    dots3.style.display = "none";
+    btnText.innerHTML = "<em>read less</em>";
+    btnText2.style.display = "inline";
+    btnText2.innerHTML = "<em>see less</em>";
+    btnText3.style.display = "inline";
+    btnText3.innerHTML = "<em>read less</em>";
+    moreText0.style.display = "inline";
+    moreText1.style.display = "inline";
+    moreText11.style.display = "inline";
+    moreText2.style.display = "inline";
+    moreText3.style.display = "inline";
+    moreText4.style.display = "inline";
+    moreText5.style.display = "inline";
+    moreText58.style.display = "inline";
+    moreText59.style.display = "inline";
     moreText6.style.display = "inline";
   }
 }
 function ToggleState() {
   var dots = document.getElementById("dots")
   var btnText2 = document.getElementById("myBtn2")
-  if (dots.style.display === "none") {
-    ReadMoreChanger("none");
-  } else if (btnText2.innerHTML.includes("less")) {
-      ReadMoreChanger("all");
-  } else {
+  var btnText3 = document.getElementById("myBtn3")
+  var second = !(dots.style.display === "none");
+  var third = (btnText2.innerHTML.includes("less"));
+  var fourth = (btnText3.innerHTML.includes("less"));
+  if (!second) {
     ReadMoreChanger("first");
+  } else if (!third) {
+    ReadMoreChanger("second");
+  } else if (!fourth) {
+    ReadMoreChanger("third");
+  } else {
+    ReadMoreChanger("all");
   }
 }
 function ToggleState2() {
   var dots2 = document.getElementById("dots2")
-  if (dots2.style.display === "none") {
-    ReadMoreChanger("first");
+  var btnText3 = document.getElementById("myBtn3")
+  var third = !(dots2.style.display === "none");
+  var fourth = (btnText3.innerHTML.includes("less"));
+  if (!third) {
+    ReadMoreChanger("second");
+  } else if (!fourth){
+    ReadMoreChanger("third");
+  } else {
+    ReadMoreChanger("all");
+  }
+}
+function ToggleState3() {
+  var dots3 = document.getElementById("dots3")
+  var fourth = !(dots3.style.display === "none");
+  if (!fourth) {
+    ReadMoreChanger("third");
   } else {
     ReadMoreChanger("all");
   }
 }
 function InitState() {
-  ReadMoreChanger("none")
+  ReadMoreChanger("first")
 }
 window.onload = InitState;
 // done hiding from old browsers -->
