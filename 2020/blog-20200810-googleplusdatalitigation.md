@@ -3,10 +3,9 @@
 So... Google fucked up. Their dying, now dead, social media platform called
 *Google+* had a data breach back when it was still alive.
 
-Crafty [lawyers](https://googleplusdatalitigation.com/) make loads of money off
-a lawsuit like this, to the tune of about
-[$1,800,000](https://www.onlinethreatalerts.com/article/2020/8/4/is-google-plus-data-litigation-settlement-class-action-lawsuit-a-scam/),
-split among six lawyers. That is about $300,000 per lawyer and their secretary.
+Crafty [lawyers][1] make loads of money off a lawsuit like this, to the tune of
+about [$1,800,000][2], split among six lawyers. That is about $300,000 per
+lawyer and their secretary.
 
 Compare that to about $1,500 for the four class representatives.
 
@@ -38,4 +37,6 @@ What do you think?
 
 
 
-[1] https://googleplusdatalitigation.com/
+[1]: https://googleplusdatalitigation.com/
+
+[2]: https://www.onlinethreatalerts.com/article/2020/8/4/is-google-plus-data-litigation-settlement-class-action-lawsuit-a-scam/
