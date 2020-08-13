@@ -8,7 +8,7 @@ boring rant about some internet
 [UX](https://en.wikipedia.org/wiki/User_experience) fad that is really
 annoying. Nothing more. </span>
 
-<span id="readmore1"> Arguably the most annoying offender is [Audio
+<span id="readmore1"> Arguably one of the more annoying offenders is [Audio
 Technica](https://www.audio-technica.com). On any given product page, not just
 do you have to click to expand the *Specifications* details. No, once you did
 that, you also have to click a </span><span id="myBtn2"
@@ -48,7 +48,7 @@ there is not much more to read.
 </span>
 
 <span id="readmore6">
-    < / rant >
+    < / rant id="clickmania">
 </span>
 
 <script language="JavaScript">
