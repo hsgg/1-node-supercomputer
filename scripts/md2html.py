@@ -97,8 +97,15 @@ def main():
         home = encapsulate("em", home)
         banner = encapsulate("p", home + "\n" + date, style="text-align:left;")
         footer = encapsulate("footer", banner)
-        body = "\n".join(["<body>", banner + "\n", markdown_path(mdfile), "</body>"])
-        html = "\n".join([top, head, body, "\n", footer, bottom])
+        html = "\n".join([
+            top,
+            head,
+            "<body>",
+            banner + "\n",
+            markdown_path(mdfile),
+            footer + "\n",
+            "</body>\n",
+            bottom])
         writefile(htmlfile, html)
 
     # generate index.html
@@ -117,7 +124,15 @@ def main():
     footer = encapsulate("em", footer)
     footer = encapsulate("p", footer, style="text-align:center;")
     footer = encapsulate("footer", footer)
-    html = "\n".join([top, head, "<body>", indexpre, toc, "</body>", footer, bottom])
+    html = "\n".join([
+        top,
+        head,
+        "<body>",
+        indexpre,
+        toc,
+        footer + "\n",
+        "</body>",
+        bottom])
     writefile("../2020/index.html", html)
 
 main()
