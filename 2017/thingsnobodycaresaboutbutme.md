@@ -15,3 +15,4 @@ haben!)</p>
 <p><a href="http://www.osmotic-studios.com/games/">Orwell</a></p>
 <p><a href="http://www.faz.net/aktuell/generation-plastik/">Generation Plastik</a></p>
 <p><a href="https://www.nytimes.com/2018/09/01/opinion/sunday/how-make-big-decision.html">Making Big Decisions: Consider alternatives</a></p>
+<p><a href="https://aatishb.com/maskmath/">On the effectiveness of masks</a></p>
