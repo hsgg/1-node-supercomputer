@@ -36,6 +36,7 @@ mdfiles = [
         "../2020/blog-20200731-gdb-signals.md",
         "../2020/blog-20200809-read-more-see-all.md",
         "../2020/blog-20200810-googleplusdatalitigation.md",
+        "../2020/blog-20201025-campaign-fundraising.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
