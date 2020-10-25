@@ -12,7 +12,7 @@ the mix, again using [Ballotpedia][2]. The DNC raised $357 million, DCCC $278
 million, DSCC $209 million. The RNC got $604 million, NRCC $214 million, NRSC
 $200 million.
 
-Let's add them together. For the democratic committees that is $844 million,
+The sum total for the democratic committees is $844 million,
 and $1,018 million for the republican committees.
 
 Also adding the presidential candidate's funding, we get $1.666 billion for the
@@ -22,7 +22,7 @@ numbers together like that? I am assuming so.
 So the difference is a "mere" $90 million, or about 5.6%.
 
 Now, I don't know enough about campaign finance to see if there is something
-wrong with my logic. I assume the money is all sepaparately raised, there are
+wrong with my logic. I assume the money is all separately raised, there are
 no other funds I am ignoring, and, above all, I split the country into D- and
 R-type people. Any of these might not be accurate assumptions.
 
