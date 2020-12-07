@@ -2,7 +2,7 @@
 
 <p><a href="http://www.super-physik.de">www.suppen-physik.de</a>
 (Dieser Link tut, also werde ich ja wohl keinen Schreibfehler gemacht
-haben!)</p>
+haben!) Oder auch nicht. Vielleicht hilft mehr Suppe: <a href="https://super-physik.blogspot.com">suppen-physik.blogspot.com</a></p>
 <p><a href="http://yourcalendricalfallacyis.com">Yourcalendricalfallacies</a></p>
 <p><a href="https://www.dwdl.de/hoffzumsonntag/51345/sind_die_lottozahlen_von_gesellschaftlicher_relevanz/">Lottozahlen</a></p>
 <p><a href="http://www.igcscience.org/">IGC Blog</a></p>
