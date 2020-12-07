@@ -17,3 +17,6 @@ haben!) Oder auch nicht. Vielleicht hilft mehr Suppe: <a href="https://super-phy
 <p><a href="https://www.nytimes.com/2018/09/01/opinion/sunday/how-make-big-decision.html">Making Big Decisions: Consider alternatives</a></p>
 <p><a href="https://aatishb.com/maskmath/">On the effectiveness of masks</a></p>
 <p><a href="https://pdfs.semanticscholar.org/35d0/d5275a8390c351ce98fbdc2ad37d210ba63b.pdf">The Little Schemer</a></p>
+<p><a href="https://1337dk.com/">Custy The Old Brown Bear</a></p>
+<p><a href="https://tetrakism.org/">Tetrakism</a></p>
+<p><a href="https://giftexchanger.org/">Gift Exchanger</a></p>
