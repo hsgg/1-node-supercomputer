@@ -1,4 +1,4 @@
-# Dark Mode via `prefer-color-scheme`
+# Dark Mode CSS
 
 I like to switch my terminal colors between a dark theme and a light theme.
 During the day I prefer the light theme, during the evening I prefer a dark
