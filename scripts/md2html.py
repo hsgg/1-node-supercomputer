@@ -113,7 +113,7 @@ def main():
 
     # generate index.html
     indexpre = markdown_path("../2020/index.md")
-    toc = "Contents:\n"
+    toc = "## Contents\n"
     for mdfile in mdfiles:
         htmlfile = path_md2html(mdfile)
         title = mdfile_date(mdfile, ": ") + readfirstline(mdfile)[2:-1]
