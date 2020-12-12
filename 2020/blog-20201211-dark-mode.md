@@ -42,9 +42,10 @@ the source of the website may no longer work. So here we go:
         }
     }
 
-Basically, we define the same colors for both light and dark modes. The `:root`
-element makes the background and text colors apply to everything that doesn't
-otherwise have it set. Of course, there are things that do have other colors
-set. For example, [links](https://www.w3schools.com/html/html_links_colors.asp)
-need their colors to be specified explicitly, and I needed to explicitly set
-the color of the [Read More](blog-20200809-read-more-see-all.html) buttons.
+Basically, we define the different colors for the same things in light and dark
+modes. The `:root` element makes the background and text colors apply to
+everything that doesn't otherwise have it set. Of course, there are things that
+do have other colors set. For example,
+[links](https://www.w3schools.com/html/html_links_colors.asp) need their colors
+to be specified explicitly, and I needed to explicitly set the color of the
+[Read More](blog-20200809-read-more-see-all.html) buttons.
