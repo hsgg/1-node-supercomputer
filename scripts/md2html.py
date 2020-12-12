@@ -38,6 +38,7 @@ mdfiles = [
         "../2020/blog-20200810-googleplusdatalitigation.md",
         "../2020/blog-20201025-campaign-fundraising.md",
         "../2020/blog-20201114-evince-link-preview.md",
+        "../2020/blog-20201211-dark-mode.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
