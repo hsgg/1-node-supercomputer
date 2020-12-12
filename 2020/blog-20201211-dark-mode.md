@@ -42,7 +42,7 @@ the source of the website may no longer work. So here we go:
         }
     }
 
-Basically, we define the different colors for the same things in light and dark
+Basically, we define different colors for the same things in light and dark
 modes. The `:root` element makes the background and text colors apply to
 everything that doesn't otherwise have it set. Of course, there are things that
 do have other colors set. For example,
