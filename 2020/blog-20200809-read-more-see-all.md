@@ -2,7 +2,7 @@
 
 Isn't it annoying that on just about every website nowadays you have to click
 the<span id="dots">...</span> <span onclick="ToggleState()" id="myBtn"
-style="color:blue;cursor:pointer"><em>Read more</em></span> <span
+style="color:var(--readmorecolor,blue);cursor:pointer"><em>Read more</em></span> <span
 id="readmore0">button? Just to see what comes next? It turns out next is just a
 boring rant about some internet
 [UX](https://en.wikipedia.org/wiki/User_experience) fad that is really
@@ -12,7 +12,7 @@ annoying. Nothing more. </span>
 Technica](https://www.audio-technica.com). On any given product page, not just
 do you have to click to expand the *Specifications* details. No, once you did
 that, you also have to click a </span><span id="myBtn2"
-onclick="ToggleState2()" style="color:blue;cursor:pointer"><em>See
+onclick="ToggleState2()" style="color:var(--readmorecolor,blue);cursor:pointer"><em>See
 all</em></span><span id="dots2">...</span><span id="readmore1.1"> button to
 actually see enough of the specifications to be of any use.</span>
 
@@ -42,7 +42,7 @@ explanation.
 
 <span id="readmore5.8">
 The</span><span id="dots3">...</span> <span id="myBtn3"
-onclick="ToggleState3()" style="color:blue;cursor:pointer"><em>Read
+onclick="ToggleState3()" style="color:var(--readmorecolor,blue);cursor:pointer"><em>Read
 more</em></span><span id="readmore5.9"> button is especially annoying when
 there is not much more to read.
 </span>
