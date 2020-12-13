@@ -17,10 +17,11 @@ all</em></span><span id="dots2">...</span><span id="readmore1.1"> button to
 actually see enough of the specifications to be of any use.</span>
 
 <span id="readmore2">
-Why? Why, Audio Technica? What went wrong that you
-implemented such an annoying feature? And where is the datasheet for the
-product? Why is it hidden? Where is it hidden? Why I can I find a datasheet for
-only half your products, and only by searching with Google or Duckduckgo.
+Why? Why, Audio Technica? What went wrong that you implemented such an annoying
+feature? And where is the datasheet for the product? Why is it hidden? Where is
+it hidden? Why can I find a datasheet for only half your products, and only by
+searching with [Google](https://www.google.com/) or
+[Duckduckgo](https://duckduckgo.com/).
 </span>
 
 <span id="readmore3">
@@ -40,15 +41,25 @@ the poorly written and overly lengthy descriptions! Ah, that must be the
 explanation.
 </span>
 
-<span id="readmore5.8">
-The</span><span id="dots3">...</span> <span id="myBtn3"
-onclick="ToggleState3()" style="color:var(--readmorecolor,blue);cursor:pointer"><em>Read
-more</em></span><span id="readmore5.9"> button is especially annoying when
-there is not much more to read.
+<span id="readmore5.1">
+Even [alibris](https://www.alibris.com/) does this. Guess what alibris sells?
+Books. Guess what books are? Walls of text. Let me spell this out for you: You
+go to a walls-of-text selling website that tries to avoid showing you walls of
+text. Hm...
 </span>
 
+<span id="readmore5.8">
+The [Read More]() button is especially annoying when</span><span
+id="dots3">...</span>
+<span id="readmore5.9"> there is not much more to read. </span>
+<span id="myBtn3" onclick="ToggleState3()"
+style="color:var(--readmorecolor,blue);cursor:pointer"><em>Read
+more</em></span>
+
 <span id="readmore6">
-    < / rant id="clickmania">
+    <br>
+    <br>
+    <&sol;rant id="clickmania">
 </span>
 
 <script language="JavaScript">
@@ -68,6 +79,7 @@ function ReadMoreChanger(newstate)
   var moreText3 = document.getElementById("readmore3")
   var moreText4 = document.getElementById("readmore4")
   var moreText5 = document.getElementById("readmore5")
+  var moreText51 = document.getElementById("readmore5.1")
   var moreText58 = document.getElementById("readmore5.8")
   var moreText59 = document.getElementById("readmore5.9")
   var moreText6 = document.getElementById("readmore6")
@@ -86,6 +98,7 @@ function ReadMoreChanger(newstate)
     moreText3.style.display = "none";
     moreText4.style.display = "none";
     moreText5.style.display = "none";
+    moreText51.style.display = "none";
     moreText58.style.display = "none";
     moreText59.style.display = "none";
     moreText6.style.display = "none";
@@ -104,6 +117,7 @@ function ReadMoreChanger(newstate)
     moreText3.style.display = "none";
     moreText4.style.display = "none";
     moreText5.style.display = "none";
+    moreText51.style.display = "none";
     moreText58.style.display = "none";
     moreText59.style.display = "none";
     moreText6.style.display = "none";
@@ -123,9 +137,10 @@ function ReadMoreChanger(newstate)
     moreText3.style.display = "inline";
     moreText4.style.display = "inline";
     moreText5.style.display = "inline";
+    moreText51.style.display = "inline";
     moreText58.style.display = "inline";
     moreText59.style.display = "none";
-    moreText6.style.display = "none";
+    moreText6.style.display = "inline";
   } else { // see all
     dots.style.display = "none";
     dots2.style.display = "none";
@@ -134,7 +149,7 @@ function ReadMoreChanger(newstate)
     btnText2.style.display = "inline";
     btnText2.innerHTML = "<em>see less</em>";
     btnText3.style.display = "inline";
-    btnText3.innerHTML = "<em>read less</em>";
+    btnText3.innerHTML = "<em>Read less</em>";
     moreText0.style.display = "inline";
     moreText1.style.display = "inline";
     moreText11.style.display = "inline";
@@ -142,6 +157,7 @@ function ReadMoreChanger(newstate)
     moreText3.style.display = "inline";
     moreText4.style.display = "inline";
     moreText5.style.display = "inline";
+    moreText51.style.display = "inline";
     moreText58.style.display = "inline";
     moreText59.style.display = "inline";
     moreText6.style.display = "inline";
