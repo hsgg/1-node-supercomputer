@@ -112,7 +112,7 @@ def main():
         writefile(htmlfile, html)
 
     # generate index.html
-    indexpre = markdown_path("../2020/index.md")
+    indexpre = markdown_path("../2021/index.md")
     toc = "## Contents\n"
     for mdfile in mdfiles:
         htmlfile = path_md2html(mdfile)
@@ -136,6 +136,6 @@ def main():
         footer + "\n",
         "</body>",
         bottom])
-    writefile("../2020/index.html", html)
+    writefile("../2021/index.html", html)
 
 main()
