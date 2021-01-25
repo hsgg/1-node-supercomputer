@@ -49,9 +49,9 @@ text. Hm...
 </span>
 
 <span id="readmore5.8">
-The [Read More]() button is especially annoying when</span><span
-id="dots3">...</span>
-<span id="readmore5.9"> there is not much more to read. </span>
+The [Read More]() button is especially annoying when there is not much more
+to</span><span id="dots3">...</span>
+<span id="readmore5.9"> read. </span>
 <span id="myBtn3" onclick="ToggleState3()"
 style="color:var(--readmorecolor,blue);cursor:pointer"><em>Read
 more</em></span>
