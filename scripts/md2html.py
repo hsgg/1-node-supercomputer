@@ -39,6 +39,7 @@ mdfiles = [
         "../2020/blog-20201025-campaign-fundraising.md",
         "../2020/blog-20201114-evince-link-preview.md",
         "../2020/blog-20201211-dark-mode.md",
+        "../2021/blog-20210324-my-spam-gets-more-attention.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
@@ -119,9 +120,11 @@ def main():
         title = mdfile_date(mdfile, ": ") + readfirstline(mdfile)[2:-1]
         print(title)
         toc += "\n  - [" + title + "](" + htmlfile + ")"
+
     # other entries
-    toc += "\n  - [Shue's blog](../2018/shuesblog/)"
-    print("Shue's blog")
+    #toc += "\n  - [Shue's blog](../2018/shuesblog/)"
+    #print("Shue's blog")
+
     toc = markdown(toc)
     footer = encapsulate("a", "2-node-supercomputer.net", href="http://2-node-supercomputer.net")
     footer = encapsulate("em", footer)
