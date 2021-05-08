@@ -40,6 +40,7 @@ mdfiles = [
         "../2020/blog-20201114-evince-link-preview.md",
         "../2020/blog-20201211-dark-mode.md",
         "../2021/blog-20210324-my-spam-gets-more-attention.md",
+        "../2021/blog-20210508-science-quantifies-uncertainty.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
