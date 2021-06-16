@@ -10,3 +10,5 @@ show all sides:
 [Ground News](https://ground.news)
 
 [TheirTube](https://www.their.tube)
+
+Who knows the other side [better](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0050092)?
