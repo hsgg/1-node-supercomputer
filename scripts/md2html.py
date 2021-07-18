@@ -43,6 +43,7 @@ mdfiles = [
         "../2021/blog-20210508-science-quantifies-uncertainty.md",
         "../2021/blog-20210611-matplotlib-imshow-none-nearest.md",
         "../2021/blog-20210614-escaping-the-bubble.md",
+        "../2021/blog-20210717-housing-prices-as-a-proxy.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
