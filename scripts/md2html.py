@@ -44,6 +44,7 @@ mdfiles = [
         "../2021/blog-20210611-matplotlib-imshow-none-nearest.md",
         "../2021/blog-20210614-escaping-the-bubble.md",
         "../2021/blog-20210717-housing-prices-as-a-proxy.md",
+        "../2021/blog-20210805-Vaccines-vs-Covid.html",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
