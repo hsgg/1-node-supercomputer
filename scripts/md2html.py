@@ -148,6 +148,8 @@ def main():
             htmlfile = mdfile
             title = get_title_from_filename(htmlfile)
         print(title)
+        if not os.path.exists(htmlfile):
+            raise FileNotFoundError(htmlfile)
         toc += "\n  - [" + title + "](" + htmlfile + ")"
 
     # other entries
