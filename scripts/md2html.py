@@ -65,6 +65,11 @@ def readfirstline(path):
     return line
 
 
+def ismarkdownfile(fname):
+    ext = os.path.splitext(fname)[1]
+    return ext == ".md"
+
+
 def path_md2html(mdfile):
     htmlfile = ".".join([os.path.splitext(mdfile)[0], "html"])
     return htmlfile
@@ -83,6 +88,20 @@ def mdfile_date(mdfile, postfix=""):
         return date + postfix
 
 
+def get_title_from_filename(fname, postfix=""):
+    fname = os.path.splitext(os.path.basename(fname))[0]
+    s = fname.split('-')
+    if len(s) < 2:
+        return ""
+    date = s[1]
+    date = date[:4] + "-" + date[4:6] + "-" + date[6:]
+    if len(date) != 10:
+        return ""
+    title = date + ": " + " ".join(s[2:])
+    return title + postfix
+
+
+
 def encapsulate(env, content, **properties):
     prop = ""
     for p in properties:
@@ -97,6 +116,8 @@ def main():
 
     # convert md files to html
     for mdfile in mdfiles:
+        if not ismarkdownfile(mdfile):
+            continue
         htmlfile = path_md2html(mdfile)
         print("Converting", mdfile, "->", htmlfile, "...")
         date = mdfile_date(mdfile)
@@ -120,8 +141,12 @@ def main():
     indexpre = markdown_path("../2021/index.md")
     toc = "## Contents\n"
     for mdfile in mdfiles:
-        htmlfile = path_md2html(mdfile)
-        title = mdfile_date(mdfile, ": ") + readfirstline(mdfile)[2:-1]
+        if ismarkdownfile(mdfile):
+            htmlfile = path_md2html(mdfile)
+            title = mdfile_date(mdfile, ": ") + readfirstline(mdfile)[2:-1]
+        else:
+            htmlfile = mdfile
+            title = get_title_from_filename(htmlfile)
         print(title)
         toc += "\n  - [" + title + "](" + htmlfile + ")"
 
