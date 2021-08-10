@@ -45,6 +45,7 @@ mdfiles = [
         "../2021/blog-20210614-escaping-the-bubble.md",
         "../2021/blog-20210717-housing-prices-as-a-proxy.md",
         "../2021/blog-20210805-Vaccines-vs-Covid.html",
+        "../2021/blog-20210810-artgerecht.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
