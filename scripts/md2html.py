@@ -3,6 +3,8 @@
 import os
 from markdown2 import markdown, markdown_path
 
+extras = ["tables"]
+
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 top = """<!DOCTYPE html>
@@ -48,6 +50,7 @@ mdfiles = [
         "../2021/blog-20210810-artgerecht.md",
         "../2021/blog-20210827-ipv6.md",
         "../2021/blog-20211029-optimize-for-signal.md",
+        "../2022/blog-20220315-dst.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
@@ -135,14 +138,14 @@ def main():
             head,
             "<body>",
             banner + "\n",
-            markdown_path(mdfile),
+            markdown_path(mdfile, extras=extras),
             footer + "\n",
             "</body>\n",
             bottom])
         writefile(htmlfile, html)
 
     # generate index.html
-    indexpre = markdown_path("../2021/index.md")
+    indexpre = markdown_path("../2022/index.md", extras=extras)
     toc = "## Contents\n"
     for mdfile in mdfiles:
         if ismarkdownfile(mdfile):
@@ -160,7 +163,7 @@ def main():
     #toc += "\n  - [Shue's blog](../2018/shuesblog/)"
     #print("Shue's blog")
 
-    toc = markdown(toc)
+    toc = markdown(toc, extras=extras)
     footer = encapsulate("a", "2-node-supercomputer.net", href="http://2-node-supercomputer.net")
     footer = encapsulate("em", footer)
     footer = encapsulate("p", footer, style="text-align:center;")
@@ -174,6 +177,6 @@ def main():
         footer + "\n",
         "</body>",
         bottom])
-    writefile("../2021/index.html", html)
+    writefile("../2022/index.html", html)
 
 main()
