@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    @media (prefers-color-scheme: light) {
+        :root {
+            background: white;
+            color: #333;
+            --readmorecolor: blue;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited {
+            color: purple;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            background: #333;
+            color: white;
+            --readmorecolor: #74a0ff; /* light blue */
+        }
+        a:link {
+            color: #add8ff;  /* darker blue than lightblue */
+        }
+        a:visited {
+            color: #b695c0;  /* a light purple */
+        }
+    }
+    @media screen and (max-width: 35em) {
+        :root {
+            width: 100vw-2em;
+        }
+    }
+    html {
+        max-width: 35em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1em;
+        padding-right: 1em;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    footer {
+        padding-top: 1em;
+        bottom: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2022-02-02</span></p>
+
+<h1>Designing Your Career</h1>
+
+<p>This basically taken more or less verbatim from the <a href="https://app.smartsheet.com/b/publish?EQBCT=00e41b6655ec42f8ae0471cd6ea3e5d8">Design Your Postdoc Prework Assignment</a>. This prework assignment is required and must be filled out before the workshop. Save the result as a text file at the end.</p>
+
+<h2>Uncover Your Needs</h2>
+
+<h3>Why are you here?</h3>
+
+<p>Please spend some time reflecting on the purpose of your work. Write a general
+statement on your view:</p>
+
+<p><em>Why work?</em></p>
+
+<p><em>What defines good work?</em></p>
+
+<p><em>What do purpose, fulfillment, and growth have to do with it?</em></p>
+
+<p><em>What might success and failure look like? What effect would success and failure have?</em>
+</br>
+<textarea id="content" rows="10" placeholder="Write something."></textarea></p>
+
+<h3>What are your goals?</h3>
+
+<p>Please spend some time brainstorming what you want to achieve.</p>
+
+<p><em>What do I want to do after my current situation ends? What are my career goals?</em></p>
+
+<p><em>What things do I want to achieve while I'm here?</em></p>
+
+<p><em>What milestones or deliverables will I need to get to my next step?</em></p>
+
+<p><em>Are there any useful connections I should try to make (names or types of people)? How might I meet them?</em></p>
+
+<p><strong>I want to be a</strong>
+<br><input id="careergoal"></p>
+
+<p><strong>I want to achieve/do:</strong>
+<br><input id="goals"></p>
+
+<p><strong>Other milestones/deliverables I need:</strong>
+<br><input id="milestones"></p>
+
+<p><strong>The people I want to meet include:</strong>
+<br><input id="peopletomeet"></p>
+
+<p><strong>Other goals I have while still in the current position are:</strong>
+<br><input id="otherthings"></p>
+
+<h3>What training do you need?</h3>
+
+<p>You might need some additional training in some areas. Maybe it is in writing,
+public speaking, coding, time management, leadership, personal development,
+specific skills, etc.
+</br>
+<textarea id="training" rows="5" placeholder="Awesome skillz."></textarea></p>
+
+<h2>What are your Values?</h2>
+
+<p>At the <em>Designing Your Postdoc</em> workshop they said that when people are
+unhappiest, it is often linked to a disjuncture between their values and their
+lives. So, what are your values?</p>
+
+<p>Below is a list of values. Pick the ones most important to you. Don't think too
+much about it but go by your gut.</p>
+
+<p>Achievement. Advancement. Adventure. Autonomy. Basic Research. Clearly defined roles. Collective action. Community. Competition. Cooperation. Creativity. Cutting edge. Discovering new knowledge. Diversity. Elitism. Equality. Excellence. Excitement. Fairness. Family. Flexibility. Giving back. Harmony. Health. Helping. Impact. Inspiring the next generation. Integrity. Intellectual challenge. Learning. Location. Loyalty. Open communication. Passion. Prestige. Productivity. Recognition. Relationships. Respect. Service. Sharing knowledge. Stability. Structure. Success. Surroundings. Teamwork. Trust. Variety. Wealth.</p>
+
+<p>Which of these are high priority values (up to 20)?
+<br><textarea id="values" rows="3"></textarea></p>
+
+<p>Do you have other important values not listed?
+<br><input id="valuesother"></p>
+
+<p>What are your top 3-5 guiding values themes?
+<br><input id="valuesguiding"></p>
+
+<h2>Analyze Your Balance</h2>
+
+<p>In this workshop they did not talk about work-life balance. Instead, they say,
+there are four things that need to be fulfilled to some extent: Love, Play,
+Work, and Health. See this <a href="https://www.youtube.com/watch?v=nJ6mi2ijCz8">video</a>
+for an intro.</p>
+
+<h3>What makes up your balance?</h3>
+
+<p><strong>Love</strong> is what gives you a sense of connection. It can be fulfilled by friends,
+family, and a community.
+<strong>Play</strong> includes things you do for fun, e.g., your hobbies, music, and games.
+<strong>Work</strong> is the stuff you do.
+<strong>Health</strong> concerns your mind, body, and spirit. For example, what you eat, how you
+exercise, and your spiritual practice.</p>
+
+<p>What are the things that fill love for you?
+<br><textarea id="lovethings" rows="2" placeholder="Love."></textarea></p>
+
+<p>What are the things that fill play for you?
+<br><textarea id="playthings" rows="2" placeholder="Play."></textarea></p>
+
+<p>What are the things that fill work for you?
+<br><textarea id="workthings" rows="2" placeholder="Work."></textarea></p>
+
+<p>What are the things that fill health for you?
+<br><textarea id="healththings" rows="2" placeholder="Health."></textarea></p>
+
+<h3>How is your balance?</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><em>Love</em></td>
+  <td></td>
+  <td>EMPTY</td>
+  <td><input type="range" min="0" max="100" value="0" id="love"></td>
+  <td>FULL</td>
+  <td><span id="love_out"></span></td>
+</tr>
+<tr>
+  <td><em>Play</em></td>
+  <td></td>
+  <td>EMPTY</td>
+  <td><input type="range" min="0" max="100" value="0" id="play"></td>
+  <td>FULL</td>
+  <td><span id="play_out"></span></td>
+</tr>
+<tr>
+  <td><em>Work</em></td>
+  <td></td>
+  <td>EMPTY</td>
+  <td><input type="range" min="0" max="100" value="0" id="work"></td>
+  <td>FULL</td>
+  <td><span id="work_out"></span></td>
+</tr>
+<tr>
+  <td><em>Health</em></td>
+  <td></td>
+  <td>EMPTY</td>
+  <td><input type="range" min="0" max="100" value="0" id="health"></td>
+  <td>FULL</td>
+  <td><span id="health_out"></span></td>
+</tr>
+</tbody>
+</table>
+
+<h3>Maintain your balance</h3>
+
+<p>In order to maintain your balance in each of these areas, think about what you
+can do to improve your balance or to rebalance when things go askew.</p>
+
+<p><em>What do you want to KEEP going forward?</em>
+<br><input id="balance_keep"></p>
+
+<p><em>What do you want to CHANGE going forward?</em>
+<br><input id="balance_change"></p>
+
+<p><em>What do you want to ADD going forward?</em>
+<br><input id="balance_add"></p>
+
+<h2>Identify Your Mentors, Explore Your Resources</h2>
+
+<h3>What mentorship do you need?</h3>
+
+<h3>What resources can you tap into?</h3>
+
+<h2>Save your work</h2>
+
+<p><button onclick="saveFormAsTextFile()">Save to file</button></p>
+
+<p><style type="text/css" media="screen">
+  label textarea {vertical-align:top;}
+  .slidecontainer { width: 100%; }
+  input[type="range"] { width: 90; }
+  input { width: 95%; }
+  textarea { width: 100%; }
+</style></p>
+
+<script type="text/javascript">
+
+function init_slider_output(v, vout) {
+  var slider = document.getElementById(v);
+  var output = document.getElementById(vout);
+  output.innerHTML = slider.value;
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
+}
+//init_slider_output('love', 'love_out');
+//init_slider_output('play', 'play_out');
+//init_slider_output('work', 'work_out');
+//init_slider_output('health', 'health_out');
+
+
+// https://gitlab.com/simongriffee/htmlformtofile
+// Current date - http://stackoverflow.com/a/4929629/412329
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+  dd='0'+dd
+} 
+
+if(mm<10) {
+  mm='0'+mm
+} 
+
+today = yyyy+'-'+mm+'-'+dd;
+
+
+function saveFormAsTextFile()
+  // Based on https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
+{
+  var textToSave =
+    '# ' + today + '\n\n\n' +
+    '## Why?\n\n' + document.getElementById('content').value + '\n\n\n' +
+    '## Work-life balance\n\n' +
+    'Love:   ' + document.getElementById('love').value + '\n' +
+    'Play:   ' + document.getElementById('play').value + '\n' +
+    'Work:   ' + document.getElementById('work').value + '\n' +
+    'Health: ' + document.getElementById('health').value + '\n\n\n' +
+    '## Values'
+
+  var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+  var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+  var fileNameToSaveAs = today + '_design_your_career.md';
+
+  var downloadLink = document.createElement("a");
+  downloadLink.download = fileNameToSaveAs;
+  downloadLink.innerHTML = "Download File";
+  downloadLink.href = textToSaveAsURL;
+  downloadLink.onclick = destroyClickedElement;
+  downloadLink.style.display = "none";
+  document.body.appendChild(downloadLink);
+
+  downloadLink.click();
+}
+
+function destroyClickedElement(event)
+{
+  document.body.removeChild(event.target);
+}
+</script>
+
+<footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2022-02-02</span></p></footer>
+
+</body>
+
+
+</html>
