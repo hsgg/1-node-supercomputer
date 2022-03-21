@@ -52,6 +52,7 @@ mdfiles = [
         "../2021/blog-20211029-optimize-for-signal.md",
         "../2022/blog-20220202-forms.md",
         "../2022/blog-20220315-dst.md",
+        "../2022/blog-20220320-taxes.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
