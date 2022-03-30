@@ -1,4 +1,4 @@
-# Science quantifies uncertainty
+# Science Quantifies Uncertainty
 
 Philosophy demands irrefutable truth. Ideology demands unquestioned faith.
 Science deals with the murky ground between these two extremes.
@@ -37,14 +37,14 @@ On the 99th day, the Sun rises yet again. Now the scientist proclaims: "That's
 interesting! I have observed the Sun rise on all of the 99 days that I have
 been observing. I am 99% certain that it will rise again tomorrow."
 
-The more the observations the scientist gathers, the more certain they become
+The more observations the scientist gathers, the more certain they become
 that the Sun rises every day. Of course, there are pitfalls here. Maybe the
 scientist has talked to other people that have seen more sunrises, or some
 other people that speculate that the Sun cannot be rising forever, perhaps
 because they haven't seen a sunset, yet, or because they have a theory that the
 Sun will stop burning in a few billion years. The scientist combines all this
 data to come to an uncertainty quantification of the theory that the Sun rises
-every day.
+on any given day.
 
 That is, science quantifies the reliability of ideas. Interesting science
 concerns itself with those models that have high reliability.
