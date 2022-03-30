@@ -27,3 +27,4 @@ haben!) Oder auch nicht. Vielleicht hilft mehr Suppe: <a href="https://super-phy
 <p><a href="https://www.ipcc.ch/report/ar6/wg1/">IPCC report</a></p>
 <p><a href="https://sealevel.nasa.gov/data_tools/17">Sealevel estimator</a></p>
 <p>"Zero based indexing makes zero sense"</p>
+<p><a href="https://acesounderglass.com/2022/02/07/epistemic-legibility/">Epistemic Legibility</a></p>
