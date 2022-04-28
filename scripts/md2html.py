@@ -54,6 +54,7 @@ mdfiles = [
         "../2022/blog-20220315-dst.md",
         "../2022/blog-20220320-taxes.md",
         "../2022/blog-20220409-inflation-is-fair.md",
+        "../2022/blog-20220427-voter-suppression-vs-election-integrity.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
