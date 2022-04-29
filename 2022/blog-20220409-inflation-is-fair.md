@@ -36,8 +36,9 @@ work of an individual.) Then, your work from 30 years ago should be only worth
 half of what it is now.
 
 Make sense? Probs not. After all, money is merely a tool to allocate resources
-(who gets that wheat, that bread, ...). What I am arguing is that the fairest
-resource allocation will be obtained with some level of positive inflation.
+(who gets that wheat, that bread, ...). However, what I am arguing is that the
+fairest resource allocation will be obtained with some level of positive
+inflation.
 
 In a country undergoing rapid change, a high inflation rate, therefore,
 correctly reflects that change in society. Who cares what you did 30 years ago?
