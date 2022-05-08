@@ -18,7 +18,7 @@ statements.
 
 The scientist, however, is content with a good description of the world, even
 if he knows it is not perfect. In fact, a good scientist will quantify their
-uncertainty.
+uncertainty. (And a great scientist will work to reduce that uncertainty.)
 
 For example, we observe the Sun rising. On the first day, the scientist may
 proclaim: "That's interesting! I have no idea if it will rise again tomorrow."
