@@ -3,7 +3,7 @@
 import os
 from markdown2 import markdown, markdown_path
 
-extras = ["tables"]
+extras = ["footnotes", "tables"]
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -55,6 +55,7 @@ mdfiles = [
         "../2022/blog-20220320-taxes.md",
         "../2022/blog-20220409-inflation-is-fair.md",
         "../2022/blog-20220427-voter-suppression-vs-election-integrity.md",
+        "../2022/blog-20220507-mentoring-students.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
