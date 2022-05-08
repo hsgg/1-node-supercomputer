@@ -25,7 +25,7 @@ proclaim: "That's interesting! I have no idea if it will rise again tomorrow."
 
 On the second day, they observe the Sun rising again. Now the scientist will
 proclaim: "That's interesting! On both days that I have been around, the Sun
-rose! I will give it a 66% chance that it will rise again tomorrow."
+rose! I will give it a 66%[^1] chance that it will rise again tomorrow."
 
 On the third day, the Sun rises again. The scientist proclaims: "That's
 interesting! The Sun has risen on all three days I was here to observe. I give
@@ -51,3 +51,12 @@ concerns itself with those models that have high reliability.
 
 Does this mean that science quantifies the truthfulness of an idea? Maybe, and
 I would say that is certainly a goal of science.
+
+
+[^1]: One can quibble with these percentages. My reasoning is that if you
+      observed only one sunrise, then that could really just be an anecdote.
+      It's like trying to estimate both mean and variance from a single data
+      point. In essence, the scientist must establish the domain of possible
+      answers and the probability from that one observation. Thus, after one
+      observation, the probability should be 50% for the next day. I'd be happy
+      to hear a more formal argument here.
