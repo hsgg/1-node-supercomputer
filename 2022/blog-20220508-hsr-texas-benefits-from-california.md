@@ -1,4 +1,4 @@
-# Will Texas High-Speed Rail benefit from California's Investment?
+# Will Texas HSR benefit from California's Investment?
 
 Most people probably have heard that California is building one swell set of
 tracks of high-speed rail (HSR) between Madera, CA and Bakersfield, CA,
