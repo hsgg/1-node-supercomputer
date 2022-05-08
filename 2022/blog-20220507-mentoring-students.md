@@ -50,7 +50,8 @@ Several things I was surprised students may need convincing:
    there are only stupid questions, so they need to be asked. Either is a way
    to encourage students to ask whatever is needed to understand. But asking
    questions is also hard. How to teach to ask questions and feel
-   comfortable doing so?
+   comfortable doing so? Maybe you just need to be a mentor before you can be a
+   student...
 
 These observations seem to stay true with other students as well. Of course,
 every student is unique in some way, but all have gone or are going through a
