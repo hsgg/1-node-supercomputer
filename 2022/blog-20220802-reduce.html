@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    @media (prefers-color-scheme: light) {
+        :root {
+            background: white;
+            color: #333;
+            --readmorecolor: blue;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited {
+            color: purple;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            background: #333;
+            color: white;
+            --readmorecolor: #74a0ff; /* light blue */
+        }
+        a:link {
+            color: #add8ff;  /* darker blue than lightblue */
+        }
+        a:visited {
+            color: #b695c0;  /* a light purple */
+        }
+    }
+    @media screen and (max-width: 35em) {
+        :root {
+            width: 100vw-2em;
+        }
+    }
+    html {
+        max-width: 35em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1em;
+        padding-right: 1em;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    footer {
+        padding-top: 1em;
+        bottom: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2022-08-02</span></p>
+
+<h1>reduce(op,arr)</h1>
+
+<p>I was trying to explain the concept of the function
+<a href="https://docs.julialang.org/en/v1/base/collections/#Base.reduce-Tuple{Any,%20Any}"><code>reduce(op,arr)</code></a>
+that takes an array <code>arr</code> and reduces it pairwise using the binary operator
+<code>op</code> until just one number is left.</p>
+
+<p>For example, the <code>sum()</code> function can then be written</p>
+
+<pre><code>sum(arr) = reduce(+, arr)
+</code></pre>
+
+<p>To explain what <code>reduce()</code> does, I thought it would be nice to have a great
+graph, but I couldn't find one online.</p>
+
+<p>Thus, I attempted to make one myself using
+<a href="https://github.com/pgf-tikz/pgf">Ti<em>k</em>Z</a>. I failed:</p>
+
+<p><a href="mapreduce/mapreduce.tex"><img src="mapreduce/mapreduce.svg" alt="reduce" title="reduce(op,arr)" /></a></p>
+
+<footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2022-08-02</span></p></footer>
+
+</body>
+
+
+</html>

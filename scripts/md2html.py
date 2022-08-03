@@ -57,6 +57,7 @@ mdfiles = [
         "../2022/blog-20220427-voter-suppression-vs-election-integrity.md",
         "../2022/blog-20220507-mentoring-students.md",
         "../2022/blog-20220508-hsr-texas-benefits-from-california.md",
+        "../2022/blog-20220802-reduce.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
