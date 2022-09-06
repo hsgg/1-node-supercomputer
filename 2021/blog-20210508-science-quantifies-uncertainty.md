@@ -50,7 +50,8 @@ That is, science quantifies the reliability of ideas. Interesting science
 concerns itself with those models that have high reliability.
 
 Does this mean that science quantifies the truthfulness of an idea? Maybe, and
-I would say that is certainly a goal of science.
+I would say that is certainly a goal of science, but I don't know how to
+quantify the uncertainty on that.
 
 
 [^1]: One can quibble with these percentages. My reasoning is that if you
