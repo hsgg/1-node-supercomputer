@@ -65,9 +65,13 @@ level of difficulty and elaboration a problem requires -- how many pages to
 write, etc. In research, that is not the case. You don't know beforehand if
 something is trivial, hard, or nigh impossible.
 
+Another idea I heard recently is that in school, students learn to interpolate.
+In research, however, you need to extrapolate.[^2]
+
 Teach the unkown. I suppose, the challenge of the research advisor is to teach
 what you don't know. Of course, you have enough background to advise the
 student, to ask the right questions, to have a good idea where the project is
 going, etc. But ultimately, the unkown is what is to be taught.
 
 [^1]: Most of this was written almost two years ago, but I found it and finally finished it in the form you see here.
+[^2]: Added 2022-09-05.
