@@ -23,7 +23,9 @@ particular definition of money has too many limits.)
 
 Now, most products of work lose value over time. This is especially true if the
 economy is changing a lot. Therefore, your *work credits* from yesteryear
-should be able to command less than they used to.
+should be able to command less than they used to. This depreciation of your
+work credits is necessary to accurately assess the worth your work from that
+time.
 
 This is especially true if productivity is increasing. However, if productivity
 is decreasing, then that old tractor, for example, gets harder to produce, so
