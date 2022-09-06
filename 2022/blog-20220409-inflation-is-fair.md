@@ -42,3 +42,5 @@ fairest resource allocation will be obtained with some level of inflation.
 
 In a country undergoing rapid change, a high inflation rate, therefore,
 correctly reflects that change in society. Who cares what you did 30 years ago?
+
+Follow-up: [Inflation is Needed for Accuracy](blog-20220905-inflation-is-accurate.html)
