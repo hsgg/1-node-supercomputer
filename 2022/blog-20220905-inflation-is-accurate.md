@@ -1,6 +1,6 @@
 # Inflation is Needed for Accuracy
 
-Now and then I've discussed with people by thoughts on [Inflation is
+Now and then I've discussed with people my thoughts on [Inflation is
 Fair](blog-20220409-inflation-is-fair.html). Several things have come up that I
 should address.
 
