@@ -30,3 +30,4 @@ haben!) Oder auch nicht. Vielleicht hilft mehr Suppe: <a href="https://super-phy
 <p><a href="https://acesounderglass.com/2022/02/07/epistemic-legibility/">Epistemic Legibility</a></p>
 <p><a href="https://unit520.net/deadtrees/">Tetris for Physicists</a></p>
 <p><a href="https://jgthms.com/web-design-in-4-minutes/">Web Design in 4 Minutes</a></p>
+<p><a href="https://scienceplusplus.org">The Science++ Project</a></p>
