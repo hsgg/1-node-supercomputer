@@ -8,12 +8,14 @@ It entails having two reservoirs: one on top of a mountain, one in the valley.
 To store electricity, pump water up the mountain. To release it, run the water
 down through generators.
 
-The [Australian](https://re100.eng.anu.edu.au/global/)
-[study](https://www.sciencedirect.com/science/article/pii/S0306261918305270#b0215)
+The [Australian
+study](https://www.sciencedirect.com/science/article/pii/S0306261918305270#b0215)
 claims up to 300 times the needed capacity exists on the planet. Perusing their
-atlas, they may be a little optimistic. However, they do exclude regions that
-are currently in other use like cities and much agricultural land, so not too
-bad, either.
+[atlas](https://re100.eng.anu.edu.au/global/), they may be a little optimistic.
+However, they do exclude regions that are currently in other use like cities
+and much agricultural land, so not too bad, either.
+
+Their [atlas](https://re100.eng.anu.edu.au/global/) is really cool.
 
 On the other hand, for the US now, NREL has a (perhaps) more realistic
 [study](https://www.nrel.gov/gis/psh-supply-curves.html), also with map and
