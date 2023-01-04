@@ -10,7 +10,7 @@ down through generators.
 
 The [Australian
 study](https://www.sciencedirect.com/science/article/pii/S0306261918305270#b0215)
-claims up to 300 times the needed capacity exists on the planet. Perusing their
+claims maybe 100 times the needed capacity exists on the planet. Perusing their
 [atlas](https://re100.eng.anu.edu.au/global/), they may be a little optimistic.
 However, they do exclude regions that are currently in other use like cities
 and much agricultural land, so not too bad, either.
