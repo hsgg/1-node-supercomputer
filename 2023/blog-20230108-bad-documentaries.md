@@ -28,7 +28,7 @@ However, the obvious way to show that the wars are one important reason, one wou
 
 Why is the documentary not showing such a graph? What is it that makes the narrator say so confidently that the world wars are a reason (not the only reason) for Swiss wealth? Did they see such a graph? If they did, why don't they show it? Is it hard to make such a graph? Did Piketty & Co. not collect such data?
 
-So here is my gripe: The documentary fails to present a convincing argument why the arguments present are the actual resons. We as viewers are left out of the full argumentation. An argument needs more than to be internally consistent. We need to hear the reasoning that leads us to believe these claims.
+So here is my gripe: The documentary fails to present a convincing argument why the arguments present are the actual reasons for Swiss wealth. We as the viewers are left out of the full argumentation. An argument needs more than to be internally consistent and plausible. We need to hear the reasoning that leads us to believe these are the actual processes that lead to Swiss riches.
 
 
 ## The Viewer
