@@ -41,6 +41,6 @@ In the best case, the viewer will have more ideas on what could be plausible rea
 
 In the worst case, the viewer will never learn what a good argument looks like. In fact, I stipulate that the viewer gets trained to make such incomplete arguments themselves.
 
-Do I have proof? No. Do I have data to show this? No. All I can say is that the argumentation in the documentary is incomplete, and to take this a reminder that we need to be significantly critical of documentaries, not just of fake news.
+Do I have proof? No. Do I have data to show this? No. All I can say is that the argumentation in the documentary is incomplete, and to take this as a reminder that we need to be significantly critical of documentaries, not just of fake news.
 
 These documentaries throw away a perfectly good opportunity to educate people in how to argue. Do better!
