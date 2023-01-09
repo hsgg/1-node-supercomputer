@@ -33,7 +33,7 @@ So here is my gripe: The documentary fails to present a convincing argument why 
 
 ## The Viewer
 
-As it stands, the documentary provides little more than plausible but unverified claims of what could be the cause.
+As it stands, the documentary provides little more than plausible claims of what could be the cause.
 
 What is the effect on the viewer?
 
