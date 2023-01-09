@@ -61,6 +61,7 @@ mdfiles = [
         "../2022/blog-20220905-inflation-is-accurate.md",
         "../2022/blog-20221029-zero-sum-vs-win-win.md",
         "../2023/blog-20230103-closed-loop-hydro-storage.md",
+        "../2023/blog-20230108-bad-documentaries.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
