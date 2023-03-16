@@ -63,6 +63,7 @@ mdfiles = [
         "../2023/blog-20230103-closed-loop-hydro-storage.md",
         "../2023/blog-20230108-bad-documentaries.md",
         "../2023/blog-20230119-worst-infographic-ever.md",
+        "../2023/blog-20230315-inotifywait.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
