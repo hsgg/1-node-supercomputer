@@ -15,18 +15,18 @@ The US has a mean of $580,000 per person and a median of $93,000. Germany is at 
 
 So the Swiss are quite rich. Why?
 
-The documentary argues that a significant part of that is due to its political stability. Remember the world wars? Me neither, but we all learned about them, and they destroyed a lot of value all over Europe. It could be one reason why Germany is significantly poorer.
+The documentary argues that a significant part of that is due to its political stability. Remember the world wars? Me neither, but we all learned about them, and they destroyed a lot all over Europe. It could be one reason why Germany is significantly poorer.
 
-There are other reason why the Swiss are so rich. According to the documentary, these include at least education and their global commodities trade, and probably some more I am forgetting.
+There are other reasons why the Swiss are so rich. According to the documentary, these include at least education and their global commodities trade, and probably some more things I am forgetting.
 
 The arguments make sense. The documentary is probably correct.
 
 
 ## Act II: The Incompleteness of the Argument
 
-However, the obvious way to show that the wars are one important reason, one would want to see the mean wealth per person as a function of time. That graph should include the period of the world wars. The expectation is to see a significant reduction in Germany's wealth, and maybe only a little reduction for the Swiss and Americans.
+However, to show that the wars are indeed an important reason for Switzerland's riches, one would want to see the mean wealth per person as a function of time. That graph should include the period of the world wars. The expectation is to see a significant reduction in Germany's wealth, and maybe only a little reduction for the Swiss and Americans.
 
-Why is the documentary not showing such a graph? What is it that makes the narrator say so confidently that the world wars are a reason (not the only reason) for Swiss wealth? Did they see such a graph? If they did, why don't they show it? Is it hard to make such a graph? Did Piketty & Co. not collect such data?
+Why is the documentary not showing such a graph? What is it that makes the narrator say so confidently that the world wars are a reason (not the only reason) for Swiss wealth? Did they see such a graph? If they did, why don't they show it? Is it hard to make such a graph? Did [Piketty & Co.](http://piketty.pse.ens.fr/en/capital21c2) not collect such data?
 
 So here is my gripe: The documentary fails to present a convincing argument why the arguments presented are the actual reasons for Swiss wealth. We as the viewers are left out of the full argumentation. An argument needs more than to be internally consistent and plausible. We need to hear the reasoning that leads us to believe these are the actual processes that lead to Swiss riches.
 
