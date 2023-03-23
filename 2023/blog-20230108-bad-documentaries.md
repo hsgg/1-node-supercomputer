@@ -2,10 +2,10 @@
 
 I've been watching *waaayyy* too many documentaries lately. Anything from why some country does this and that, why trains or why not trains, or mathematics this and physics that.
 
-Here I will argue that arguments in documentaries should be better. First, I show a concrete example where a documentary tries to explain why Switzerland is so rich. Then, I will argue that they only provide plausible but unverified claims, no real argumentation. Finally, I argue that such incomplete arguments train the viewer to be uncritical and to accept terrible arguments too easily.
+Here I will argue in three acts that arguments in documentaries should be better. First, I show a concrete example where a documentary tries to explain why Switzerland is so rich. Second, I will argue that they only provide plausible but unverified claims, no real argumentation. Third, I argue that such incomplete arguments train the viewer to be uncritical and to accept terrible arguments too easily.
 
 
-## The Swiss
+## Act I: The Swiss
 
 For a concrete example, let's take a documentary on [why Switzerland is so rich](https://www.youtube.com/watch?v=jXvSawDj4iQ). I am not picking on this one in particular, most others do the same mistake.
 
@@ -22,7 +22,7 @@ There are other reason why the Swiss are so rich. According to the documentary, 
 The arguments make sense. The documentary is probably correct.
 
 
-## The Incompleteness of the Argument
+## Act II: The Incompleteness of the Argument
 
 However, the obvious way to show that the wars are one important reason, one would want to see the mean wealth per person as a function of time. That graph should include the period of the world wars. The expectation is to see a significant reduction in Germany's wealth, and maybe only a little reduction for the Swiss and Americans.
 
@@ -31,7 +31,7 @@ Why is the documentary not showing such a graph? What is it that makes the narra
 So here is my gripe: The documentary fails to present a convincing argument why the arguments presented are the actual reasons for Swiss wealth. We as the viewers are left out of the full argumentation. An argument needs more than to be internally consistent and plausible. We need to hear the reasoning that leads us to believe these are the actual processes that lead to Swiss riches.
 
 
-## The Viewer
+## Act III: The Viewer
 
 As it stands, the documentary provides little more than plausible claims of what could be the cause.
 
