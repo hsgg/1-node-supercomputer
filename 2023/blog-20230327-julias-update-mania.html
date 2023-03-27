@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    @media (prefers-color-scheme: light) {
+        :root {
+            background: white;
+            color: #333;
+            --readmorecolor: blue;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited {
+            color: purple;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            background: #333;
+            color: white;
+            --readmorecolor: #74a0ff; /* light blue */
+        }
+        a:link {
+            color: #add8ff;  /* darker blue than lightblue */
+        }
+        a:visited {
+            color: #b695c0;  /* a light purple */
+        }
+    }
+    @media screen and (max-width: 55ch) {
+        :root {
+            width: 100vw-2ch;
+        }
+    }
+    html {
+        max-width: 55ch;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1ch;
+        padding-right: 1ch;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    footer {
+        padding-top: 1em;
+        bottom: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2023-03-27</span></p>
+
+<h1>Julia's Update-Mania</h1>
+
+<p>By default <a href="julialang.org">JuliaLang</a> updates its registry on every opportunity
+it gets, for example when you <code>]add</code> or <code>]rm</code> a package.</p>
+
+<p>This is especially annoying when you have packages like
+<code>DifferentialEquations.jl</code> that update frequently and take a long time to
+compile. Removing <code>DifferentialEquations.jl</code> is not an option because it is a
+great package, and I want to use it.</p>
+
+<p>Thus, just to do a few package operations can take a very long time, where
+"very long" means about 2-5 minutes per operation. That is too much. It is a
+brake that is unacceptably long and generates a lot of frustration.</p>
+
+<p>Of course, Julia doesn't quite upate every single time. Once in a session, it
+generally doesn't update again. This is because of the
+<code>Pkg.UPDATED_REGISTRY_THIS_SESSION</code> variable. And herein lies the solution: Set
+that variable on every startup of Julia, in the file
+<code>~/.julia/config/startup.jl</code>:</p>
+
+<pre><code>using Pkg: Pkg
+Pkg.UPDATED_REGISTRY_THIS_SESSION[] = true
+</code></pre>
+
+<p>And, voila, no more update-mania.</p>
+
+<p>Updating now needs to be done explicitly with <code>]up</code>.</p>
+
+<footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2023-03-27</span></p></footer>
+
+</body>
+
+
+</html>
