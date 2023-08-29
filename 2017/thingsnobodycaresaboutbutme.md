@@ -31,3 +31,4 @@ haben!) Oder auch nicht. Vielleicht hilft mehr Suppe: <a href="https://super-phy
 <p><a href="https://unit520.net/deadtrees/">Tetris for Physicists</a></p>
 <p><a href="https://jgthms.com/web-design-in-4-minutes/">Web Design in 4 Minutes</a></p>
 <p><a href="https://scienceplusplus.org">The Science++ Project</a></p>
+<p><a href="https://www.youtube.com/shorts/0D290GHHuXE">Lebenslauf</a></p>
