@@ -39,4 +39,4 @@ $$
 
 That is, we explicitly express that, within the current context, *substituting* the number $6$ for $y$ is sufficient.
 
-Perhaps a philosophical difficulty could arise if $y$ is some small $\epsilon$ away from $6$, or $y=6+\epsilon$. As we take the limit $\epsilon\to0$, can we ever say we don't substitute
+Perhaps a philosophical difficulty could arise if $y$ is some small $\epsilon$ away from $6$, or $y=6+\epsilon$. As we take the limit $\epsilon\to0$, can we ever say we don't substitute?
