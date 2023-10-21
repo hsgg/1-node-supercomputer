@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    @media (prefers-color-scheme: light) {
+        :root {
+            background: white;
+            color: #333;
+            --readmorecolor: blue;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited {
+            color: purple;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            background: #333;
+            color: white;
+            --readmorecolor: #74a0ff; /* light blue */
+        }
+        a:link {
+            color: #add8ff;  /* darker blue than lightblue */
+        }
+        a:visited {
+            color: #b695c0;  /* a light purple */
+        }
+    }
+    @media screen and (max-width: 55ch) {
+        :root {
+            width: 100vw-2ch;
+        }
+    }
+    html {
+        max-width: 55ch;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1ch;
+        padding-right: 1ch;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    footer {
+        padding-top: 1em;
+        bottom: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2023-10-21</span></p>
+
+<h1>No such thing as substitution in mathematics</h1>
+
+<p>Today I claim that in algebra the word <em>substitution</em> is really a misnomer, coming from concentrating on the representation on paper rather than the meaning of a mathematical expression. A more accurate description would be to use the word "relabeling" instead of "substituting."</p>
+
+<p>I got onto this train of thought as I was listening to the podcast <a href="https://features.apmreports.org/sold-a-story/"><em>Sold a Story</em></a> by Emily Hanford. In the podcast the narrator says that reading has been taught all wrong in school. Without going into the details of the podcast and whether it is right or not, I was thinking if something similar may be happening in Mathematics education. Is math hard because it is taught wrong? Maybe. The words "solve by subtitution" have always bothered me, as soon as I heard them uttered in the halls of the UC Davis campus $\sim20$ years ago, and I think I now know why.</p>
+
+<h2>An Example</h2>
+
+<p>Take the set of equations</p>
+
+<p>$$
+\begin{align<em>}
+x &amp;= 10 + y \,,\
+y &amp;= 6\,.
+\end{align</em>}
+$$</p>
+
+<p>Usually, one would say that in order to calculate $x$, you should <em>substitute</em> the value for $y$ into the first equation. That is, you erase the $y$ and write $6$ in its place. Such is the operation performed. Thus, you get $x=10+6=16$.</p>
+
+<p>In this description little is said of why this works or why this is the correct procedure to follow. Indeed, all it does is give you a rule, with no understanding needed. It is a procedure operating purely on the syntax level of the expressions as written on paper.</p>
+
+<p>Indeed, this operational description makes it seem like $y$ and $6$ may actually be different things.</p>
+
+<h2>Substitution only works because of Equality</h2>
+
+<p>However, within the context of this example problem, the second equation tells us that $y$ and $6$ are equal. They refer to the same mathematical object, the number six. Thus, the substitution is not substituting what is in the equation. Rather, it merely changes the label for the underlying mathematical object.</p>
+
+<p>That is, on the <em>semantic</em> level there is no substitution happening, and a more accurate term would be "relabeling" or "renaming". Indeed, the substitution procedure works precisely <em>because</em> there is no substitution happening on the semantic level, only on the syntactic level.</p>
+
+<p>Thus, when applying the "solve-by-substitution" technique, you are not actually substituting anything other than some labels.</p>
+
+<h2>Substitution is Approximation</h2>
+
+<p>OK, maybe there is substitution. Namely, when doing approximations. Consider the case when $y=6.001$. However, we may not care that $y$ isn't exactly $6$; it may be close enough for our purposes. Then, we may say</p>
+
+<p>$$
+y \approx 6\,.
+$$</p>
+
+<p>That is, we explicitly express that, within the current context, <em>substituting</em> the number $6$ for $y$ is sufficient.</p>
+
+<p>Perhaps a philosophical difficulty could arise if $y$ is some small $\epsilon$ away from $6$, or $y=6+\epsilon$. As we take the limit $\epsilon\to0$, can we ever say we don't substitute</p>
+
+<footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2023-10-21</span></p></footer>
+
+</body>
+
+
+</html>
