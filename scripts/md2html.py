@@ -1,9 +1,36 @@
 #!/usr/bin/env python3
 
 import os
-from markdown2 import markdown, markdown_path
 
-extras = ["footnotes", "strike", "tables"]
+import markdown2
+
+#import markdown
+
+#from cmarkgfm import markdown_to_html
+#import cmarkgfm
+#from cmarkgfm import markdown_to_html_with_extensions
+
+
+
+
+def markdown(md):
+    extensions = ["footnotes", "strike", "tables"]
+    #extensions = ["extra", "strike", "tables"]
+    return markdown2.markdown(md, extras=extensions)
+
+    #opts = (cmarkgfm.cmark.Options.CMARK_OPT_UNSAFE
+    #        | cmarkgfm.cmark.Options.CMARK_OPT_FOOTNOTES)
+    #return markdown_to_html_with_extensions(md, options=opts)
+
+
+# load markdown from file `fname`, then convert to html
+def markdown_path(fname):
+    with open(fname, "r") as f:
+        md = f.read()
+    html = markdown(md)
+    return html
+
+
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
@@ -154,14 +181,14 @@ def main():
             head,
             "<body>",
             banner + "\n",
-            markdown_path(mdfile, extras=extras),
+            markdown_path(mdfile),
             footer + "\n",
             "</body>\n",
             bottom])
         writefile(htmlfile, html)
 
     # generate index.html
-    indexpre = markdown_path("../2023/index.md", extras=extras)
+    indexpre = markdown_path("../2023/index.md")
     toc = "## Contents\n"
     for mdfile in mdfiles:
         if ismarkdownfile(mdfile):
@@ -175,11 +202,7 @@ def main():
             raise FileNotFoundError(htmlfile)
         toc += "\n  - [" + title + "](" + htmlfile + ")"
 
-    # other entries
-    #toc += "\n  - [Shue's blog](../2018/shuesblog/)"
-    #print("Shue's blog")
-
-    toc = markdown(toc, extras=extras)
+    toc = markdown(toc)
     footer = encapsulate("a", "2-node-supercomputer.net", href="http://2-node-supercomputer.net")
     footer = encapsulate("em", footer)
     footer = encapsulate("p", footer, style="text-align:center;")
