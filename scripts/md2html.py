@@ -92,6 +92,7 @@ mdfiles = [
         "../2023/blog-20230119-worst-infographic-ever.md",
         "../2023/blog-20230315-inotifywait.md",
         "../2023/blog-20230327-julias-update-mania.md",
+        "../2023/blog-20230412-organic-tea-is-responsible-for-hunger.md",
         "../2023/blog-20230512-sodimm-speed-and-latency.md",
         "../2023/blog-20231021-substitution.md",
         "../2017/thingsnobodycaresaboutbutme.md",
