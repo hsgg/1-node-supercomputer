@@ -95,6 +95,7 @@ mdfiles = [
         "../2023/blog-20230412-organic-tea-is-responsible-for-hunger.md",
         "../2023/blog-20230512-sodimm-speed-and-latency.md",
         "../2023/blog-20231021-substitution.md",
+        "../2024/blog-20240109-git-fast-forward.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
