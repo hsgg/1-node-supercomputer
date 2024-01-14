@@ -67,29 +67,11 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2021-06-11</span></p>
 
-<h1><code>none</code> vs <code>nearest</code> in Matplotlib's imshow()</h1>
-
-<p>To get a visual display of the entries of a matrix, I often use
-<a href="https://matplotlib.org/">Matplotlib's</a>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html"><code>imshow()</code></a>
-function. However, by default that function does bilinear interpolation in
-order to smooth the values between the centers of the pixels. That makes it
-virtually useless for analysing the elements of a matrix.</p>
-
-<p>Therefore, I have been passing to <code>imshow()</code> the parameter
-<code>interpolation='none'</code>. This led to a mysterious bug, where I would save the
-image in PDF format, then include in a LaTeX document and compile directly to
-PDF using <code>latexmk -pdf myfile.tex</code>. The bug would manifest itself when
-displaying the PDF at <em>some</em> lower resolutions it would blur the image and do
-some kind of interpolation or antialiasing between the pixel centers again. But
-not at all lower resolutions, which is why it had escaped me before.</p>
-
+<h1 id="none-vs-nearest-in-matplotlibs-imshow"><code>none</code> vs <code>nearest</code> in Matplotlib’s imshow()</h1>
+<p>To get a visual display of the entries of a matrix, I often use <a href="https://matplotlib.org/">Matplotlib’s</a> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html"><code>imshow()</code></a> function. However, by default that function does bilinear interpolation in order to smooth the values between the centers of the pixels. That makes it virtually useless for analysing the elements of a matrix.</p>
+<p>Therefore, I have been passing to <code>imshow()</code> the parameter <code>interpolation='none'</code>. This led to a mysterious bug, where I would save the image in PDF format, then include in a LaTeX document and compile directly to PDF using <code>latexmk -pdf myfile.tex</code>. The bug would manifest itself when displaying the PDF at <em>some</em> lower resolutions it would blur the image and do some kind of interpolation or antialiasing between the pixel centers again. But not at all lower resolutions, which is why it had escaped me before.</p>
 <p>Clearly, this can be done better? Yes!</p>
-
-<p>Pass <code>interpolation='nearest'</code> instead. That solves the bug, at least as well
-as I can expect. Why does this work? No idea. I guess it somehow turns off that
-antialiasing. In any case, remember to use <code>'nearest'</code>
-instead of <code>'none'</code>.</p>
+<p>Pass <code>interpolation='nearest'</code> instead. That solves the bug, at least as well as I can expect. Why does this work? No idea. I guess it somehow turns off that antialiasing. In any case, remember to use <code>'nearest'</code> instead of <code>'none'</code>.</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2021-06-11</span></p></footer>

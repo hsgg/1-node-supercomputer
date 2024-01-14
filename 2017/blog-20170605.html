@@ -67,44 +67,21 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2017-06-05</span></p>
 
-<h1>Compiling Atlas-Lapack on Archlinux</h1>
-
-<p>If you want performance when inverting your matrices, you should use
-<code>atlas-lapck</code>. It measures the performance various linear algebra
-algorithms, and chooses the best performing one. That's awesome, but comes with
-a caveat: The performance measurements are bogus if you have CPU throttling
-enabled.</p>
-
-<p>Here I detail the steps needed to disable CPU throttling in order to compile
-atlas-lapack.</p>
-
+<h1 id="compiling-atlas-lapack-on-archlinux">Compiling Atlas-Lapack on Archlinux</h1>
+<p>If you want performance when inverting your matrices, you should use <code>atlas-lapck</code>. It measures the performance various linear algebra algorithms, and chooses the best performing one. That’s awesome, but comes with a caveat: The performance measurements are bogus if you have CPU throttling enabled.</p>
+<p>Here I detail the steps needed to disable CPU throttling in order to compile atlas-lapack.</p>
 <p>I executed these commands:</p>
-
 <pre><code>$ cpupower idle-set -D 0
 $ cpupower frequency-set -g preformance
 $ cpupower set -b 0
-$ echo off &gt; /sys/devices/system/cpu/intel_pstate/status
-</code></pre>
-
-<p>Only after the last one could I finally compile atlas-lapack. However, I'm not
-sure if the other ones are really needed.</p>
-
-<p>Also, something seems odd. It appears that the CPU is now stuck at some fairly
-low frequency.</p>
-
-<p>So, yeah, this did not finish running overnight. It clearly is stuck at some
-low frequency. When disabling the pstate driver the CPU stays at whatever
-frequency it was at.</p>
-
-<p>Hence, the following strategy should work. First, set the frequency manually.
-This can be done by setting the minimum and maximum frequencies to the same
-value. Then, we can disable the pstate driver:</p>
-
+$ echo off &gt; /sys/devices/system/cpu/intel_pstate/status</code></pre>
+<p>Only after the last one could I finally compile atlas-lapack. However, I’m not sure if the other ones are really needed.</p>
+<p>Also, something seems odd. It appears that the CPU is now stuck at some fairly low frequency.</p>
+<p>So, yeah, this did not finish running overnight. It clearly is stuck at some low frequency. When disabling the pstate driver the CPU stays at whatever frequency it was at.</p>
+<p>Hence, the following strategy should work. First, set the frequency manually. This can be done by setting the minimum and maximum frequencies to the same value. Then, we can disable the pstate driver:</p>
 <pre><code>$ cpupower frequency-set --min 2000
 $ cpupower frequency-set --max 2000
-$ echo off &gt; /sys/devices/system/cpu/intel_pstate/status
-</code></pre>
-
+$ echo off &gt; /sys/devices/system/cpu/intel_pstate/status</code></pre>
 <p>I will try this once the current compilation run is finished.</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>

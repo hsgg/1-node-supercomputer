@@ -67,20 +67,12 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2018-03-26</span></p>
 
-<h1>Using Apple's SuperDrive with Archlinux</h1>
-
-<p>Apple doesn't like to play nice with others. Their SuperDrive is no exception.</p>
-
+<h1 id="using-apples-superdrive-with-archlinux">Using Apple’s SuperDrive with Archlinux</h1>
+<p>Apple doesn’t like to play nice with others. Their SuperDrive is no exception.</p>
 <p>However, by sending some magic numbers to the drive you can make it <a
-href="https://christianmoser.me/use-apples-usb-superdrive-with-linux/">work</a>.
-You need the package <tt>sg3_utils</tt>. Then send the magic byte sequence to
-the drive:</p>
-
-<pre><code>$ sg_raw /dev/sr0 EA 00 00 00 00 00 01
-</code></pre>
-
-<p>That's it! The aforementioned link also contain instructions on how to automate
-the command using <tt>udev</tt> rules, if you're into that.</p>
+href="https://christianmoser.me/use-apples-usb-superdrive-with-linux/">work</a>. You need the package <tt>sg3_utils</tt>. Then send the magic byte sequence to the drive:</p>
+<pre><code>$ sg_raw /dev/sr0 EA 00 00 00 00 00 01</code></pre>
+<p>That’s it! The aforementioned link also contain instructions on how to automate the command using <tt>udev</tt> rules, if you’re into that.</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2018-03-26</span></p></footer>

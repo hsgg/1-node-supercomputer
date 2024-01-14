@@ -2,7 +2,7 @@
 
 import os
 
-import markdown2
+#import markdown2
 
 #import markdown
 
@@ -10,17 +10,21 @@ import markdown2
 #import cmarkgfm
 #from cmarkgfm import markdown_to_html_with_extensions
 
+import pypandoc
 
 
 
 def markdown(md):
-    extensions = ["footnotes", "strike", "tables"]
+    #extensions = ["footnotes", "strike", "tables"]
     #extensions = ["extra", "strike", "tables"]
-    return markdown2.markdown(md, extras=extensions)
+    #return markdown2.markdown(md, extras=extensions)
 
     #opts = (cmarkgfm.cmark.Options.CMARK_OPT_UNSAFE
     #        | cmarkgfm.cmark.Options.CMARK_OPT_FOOTNOTES)
     #return markdown_to_html_with_extensions(md, options=opts)
+
+    s = pypandoc.convert_text(md, to='html', format='md', extra_args=['--mathml'])
+    return s
 
 
 # load markdown from file `fname`, then convert to html

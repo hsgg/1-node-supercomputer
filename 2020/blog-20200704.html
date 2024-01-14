@@ -67,14 +67,9 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2020-07-04</span></p>
 
-<h1>Upgrading to Debian 11 (bullseye)</h1>
-
-<p>Debian 11, codename bullseye, is not yet released. However, you can already
-upgrade it while it is in testing.</p>
-
-<p>In principle, the upgrade should be easy: simply update your
-<code>/etc/apt/sources.list</code> to contain</p>
-
+<h1 id="upgrading-to-debian-11-bullseye">Upgrading to Debian 11 (bullseye)</h1>
+<p>Debian 11, codename bullseye, is not yet released. However, you can already upgrade it while it is in testing.</p>
+<p>In principle, the upgrade should be easy: simply update your <code>/etc/apt/sources.list</code> to contain</p>
 <pre><code>deb http://deb.debian.org/debian/ bullseye main contrib non-free
 deb-src http://deb.debian.org/debian/ bullseye main contrib non-free
 
@@ -85,28 +80,13 @@ deb http://deb.debian.org/debian/ bullseye-updates main contrib non-free
 deb-src http://deb.debian.org/debian/ bullseye-updates main contrib non-free
 
 deb http://deb.debian.org/debian/ bullseye-backports main contrib non-free
-deb-src http://deb.debian.org/debian/ bullseye-backports main contrib non-free
-</code></pre>
-
+deb-src http://deb.debian.org/debian/ bullseye-backports main contrib non-free</code></pre>
 <p>Then, run</p>
-
-<pre><code>$ sudo apt dist-upgrade
-</code></pre>
-
-<p>Of course, in practice you run into problems along the way. In my case, there
-was a dependency issue with <code>libgcc-8-dev</code>, which I tracked down (without too
-much due diligence, uh oh) to <code>libmutter-3-0</code> being locally installed and not
-upgraded. So purge that and rerun the dist-upgrade. Done.</p>
-
-<p>Not quite. It takes a long time, the timeout locked the screen, and it wouldn't
-even let me enter the password anymore. Argh.</p>
-
-<p>But not to despair, use ssh from another computer (or perhaps <code>Alt+Ctrl+F2</code> to
-get a console?), and issue the following command:</p>
-
-<pre><code>$ sudo loginctl unlock-sessions
-</code></pre>
-
+<pre><code>$ sudo apt dist-upgrade</code></pre>
+<p>Of course, in practice you run into problems along the way. In my case, there was a dependency issue with <code>libgcc-8-dev</code>, which I tracked down (without too much due diligence, uh oh) to <code>libmutter-3-0</code> being locally installed and not upgraded. So purge that and rerun the dist-upgrade. Done.</p>
+<p>Not quite. It takes a long time, the timeout locked the screen, and it wouldn’t even let me enter the password anymore. Argh.</p>
+<p>But not to despair, use ssh from another computer (or perhaps <code>Alt+Ctrl+F2</code> to get a console?), and issue the following command:</p>
+<pre><code>$ sudo loginctl unlock-sessions</code></pre>
 <p>Voila, screen unlocked!</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>

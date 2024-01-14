@@ -67,30 +67,15 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2023-03-15</span></p>
 
-<h1><code>inotifywait</code></h1>
-
+<h1 id="inotifywait"><code>inotifywait</code></h1>
 <p>Sometimes you want to wait on a file change, and then do something.</p>
-
-<p>For example, you modify a source code file, and whenever you save, you want to
-compile.</p>
-
-<p><code>inotifywait</code> from the
-<a href="https://github.com/inotify-tools/inotify-tools/wiki"><code>inotify-tools</code></a> package
-to the rescue!</p>
-
-<p>However, it only outputs that something changed, so pipe the output to clear
-the terminal and call <code>make</code>:</p>
-
+<p>For example, you modify a source code file, and whenever you save, you want to compile.</p>
+<p><code>inotifywait</code> from the <a href="https://github.com/inotify-tools/inotify-tools/wiki"><code>inotify-tools</code></a> package to the rescue!</p>
+<p>However, it only outputs that something changed, so pipe the output to clear the terminal and call <code>make</code>:</p>
 <pre><code>inotifywait -m -e close_write *.ly *.ily |
-while read line; do clear; make; done
-</code></pre>
-
-<p>The <code>-m</code> option says to keep monitoring, <code>-e close_write</code> monitors for programs
-closing a file that had been opened for writing, and <code>*.ly *.ily</code> are the file
-patterns to monitor.</p>
-
-<p>There is also <code>fsnotifywait</code> and <code>fsnotifywatch</code> and <code>inotifywatch</code>. One day I
-will find out the difference.</p>
+while read line; do clear; make; done</code></pre>
+<p>The <code>-m</code> option says to keep monitoring, <code>-e close_write</code> monitors for programs closing a file that had been opened for writing, and <code>*.ly *.ily</code> are the file patterns to monitor.</p>
+<p>There is also <code>fsnotifywait</code> and <code>fsnotifywatch</code> and <code>inotifywatch</code>. One day I will find out the difference.</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2023-03-15</span></p></footer>

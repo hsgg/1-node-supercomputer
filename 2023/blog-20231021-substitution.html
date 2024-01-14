@@ -67,48 +67,31 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2023-10-21</span></p>
 
-<h1>No such thing as substitution in mathematics</h1>
-
-<p>Today I claim that in algebra the word <em>substitution</em> is really a misnomer, coming from concentrating on the representation on paper rather than the meaning of a mathematical expression. A more accurate description would be to use the word "relabeling" instead of "substituting."</p>
-
-<p>I got onto this train of thought as I was listening to the podcast <a href="https://features.apmreports.org/sold-a-story/"><em>Sold a Story</em></a> by Emily Hanford. In the podcast the narrator says that reading has been taught all wrong in school. Without going into the details of the podcast and whether it is right or not, I was thinking if something similar may be happening in Mathematics education. Is math hard because it is taught wrong? Maybe. The words "solve by subtitution" have always bothered me, as soon as I heard them uttered in the halls of the UC Davis campus $\sim20$ years ago, and I think I now know why.</p>
-
-<h2>An Example</h2>
-
+<h1 id="no-such-thing-as-substitution-in-mathematics">No such thing as substitution in mathematics</h1>
+<p>Today I claim that in algebra the word <em>substitution</em> is really a misnomer, coming from concentrating on the representation on paper rather than the meaning of a mathematical expression. A more accurate description would be to use the word “relabeling” instead of “substituting.”</p>
+<p>I got onto this train of thought as I was listening to the podcast <a href="https://features.apmreports.org/sold-a-story/"><em>Sold a Story</em></a> by Emily Hanford. In the podcast the narrator says that reading has been taught all wrong in school. Without going into the details of the podcast and whether it is right or not, I was thinking if something similar may be happening in Mathematics education. Is math hard because it is taught wrong? Maybe. The words “solve by subtitution” have always bothered me, as soon as I heard them uttered in the halls of the UC Davis campus <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∼</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">\sim20</annotation></semantics></math> years ago, and I think I now know why.</p>
+<h2 id="an-example">An Example</h2>
 <p>Take the set of equations</p>
-
-<p>$$
-\begin{align<em>}
-x &amp;= 10 + y \,,\
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mi>x</mi></mtd><mtd columnalign="left"><mo>=</mo><mn>10</mn><mo>+</mo><mi>y</mi><mspace width="0.167em"></mspace><mo>,</mo></mtd></mtr><mtr><mtd columnalign="right"><mi>y</mi></mtd><mtd columnalign="left"><mo>=</mo><mn>6</mn><mspace width="0.167em"></mspace><mi>.</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">
+\begin{aligned}
+x &amp;= 10 + y \,,\\
 y &amp;= 6\,.
-\end{align</em>}
-$$</p>
-
-<p>Usually, one would say that in order to calculate $x$, you should <em>substitute</em> the value for $y$ into the first equation. That is, you erase the $y$ and write $6$ in its place. Such is the operation performed. Thus, you get $x=10+6=16$.</p>
-
+\end{aligned}
+</annotation></semantics></math></p>
+<p>Usually, one would say that in order to calculate <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>, you should <em>substitute</em> the value for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> into the first equation. That is, you erase the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> and write <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math> in its place. Such is the operation performed. Thus, you get <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>10</mn><mo>+</mo><mn>6</mn><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">x=10+6=16</annotation></semantics></math>.</p>
 <p>In this description little is said of why this works or why this is the correct procedure to follow. Indeed, all it does is give you a rule, with no understanding needed. It is a procedure operating purely on the syntax level of the expressions as written on paper.</p>
-
-<p>Indeed, this operational description makes it seem like $y$ and $6$ may actually be different things.</p>
-
-<h2>Substitution only works because of Equality</h2>
-
-<p>However, within the context of this example problem, the second equation tells us that $y$ and $6$ are equal. They refer to the same mathematical object, the number six. Thus, the substitution is not substituting what is in the equation. Rather, it merely changes the label for the underlying mathematical object.</p>
-
-<p>That is, on the <em>semantic</em> level there is no substitution happening, and a more accurate term would be "relabeling" or "renaming". Indeed, the substitution procedure works precisely <em>because</em> there is no substitution happening on the semantic level, only on the syntactic level.</p>
-
-<p>Thus, when applying the "solve-by-substitution" technique, you are not actually substituting anything other than some labels.</p>
-
-<h2>Substitution is Approximation</h2>
-
-<p>OK, maybe there is substitution. Namely, when doing approximations. Consider the case when $y=6.001$. However, we may not care that $y$ isn't exactly $6$; it may be close enough for our purposes. Then, we may say</p>
-
-<p>$$
+<p>Indeed, this operational description makes it seem like <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math> may actually be different things.</p>
+<h2 id="substitution-only-works-because-of-equality">Substitution only works because of Equality</h2>
+<p>However, within the context of this example problem, the second equation tells us that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math> are equal. They refer to the same mathematical object, the number six. Thus, the substitution is not substituting what is in the equation. Rather, it merely changes the label for the underlying mathematical object.</p>
+<p>That is, on the <em>semantic</em> level there is no substitution happening, and a more accurate term would be “relabeling” or “renaming”. Indeed, the substitution procedure works precisely <em>because</em> there is no substitution happening on the semantic level, only on the syntactic level.</p>
+<p>Thus, when applying the “solve-by-substitution” technique, you are not actually substituting anything other than some labels.</p>
+<h2 id="substitution-is-approximation">Substitution is Approximation</h2>
+<p>OK, maybe there is substitution. Namely, when doing approximations. Consider the case when <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mn>6.001</mn></mrow><annotation encoding="application/x-tex">y=6.001</annotation></semantics></math>. However, we may not care that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> isn’t exactly <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math>; it may be close enough for our purposes. Then, we may say</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>≈</mo><mn>6</mn><mspace width="0.167em"></mspace><mi>.</mi></mrow><annotation encoding="application/x-tex">
 y \approx 6\,.
-$$</p>
-
-<p>That is, we explicitly express that, within the current context, <em>substituting</em> the number $6$ for $y$ is sufficient.</p>
-
-<p>Perhaps a philosophical difficulty could arise if $y$ is some small $\epsilon$ away from $6$, or $y=6+\epsilon$. As we take the limit $\epsilon\to0$, can we ever say we don't substitute?</p>
+</annotation></semantics></math></p>
+<p>That is, we explicitly express that, within the current context, <em>substituting</em> the number <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math> for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> is sufficient.</p>
+<p>Perhaps a philosophical difficulty could arise if <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> is some small <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math> away from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>,</mo></mrow><annotation encoding="application/x-tex">6,</annotation></semantics></math> or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mn>6</mn><mo>+</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">y=6+\epsilon</annotation></semantics></math>. As we take the limit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon\to0</annotation></semantics></math>, can we ever say we don’t substitute?</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2023-10-21</span></p></footer>

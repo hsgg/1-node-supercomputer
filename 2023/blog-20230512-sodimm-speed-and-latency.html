@@ -67,32 +67,18 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2023-05-12</span></p>
 
-<h1>How to check SO-DIMM speed and latency on linux</h1>
-
-<p>Speed is reported all over the place, but latency is harder to find. The tool
-that worked for me was <code>decode-dimms</code> from the <code>i2c-tools</code> package.</p>
-
-<pre><code>$ sudo decode-dimms
-</code></pre>
-
-<p>One memory bank was detected immediately. The other one was not detected until
-I loaded the <code>eeprom</code> module (or was it the <code>ee1004</code> module?),</p>
-
-<pre><code>$ sudo modprobe eeprom
-</code></pre>
-
-<p>There are a few more modules one might want to
-<a href="https://superuser.com/a/1499521/724366">try</a>:</p>
-
+<h1 id="how-to-check-so-dimm-speed-and-latency-on-linux">How to check SO-DIMM speed and latency on linux</h1>
+<p>Speed is reported all over the place, but latency is harder to find. The tool that worked for me was <code>decode-dimms</code> from the <code>i2c-tools</code> package.</p>
+<pre><code>$ sudo decode-dimms</code></pre>
+<p>One memory bank was detected immediately. The other one was not detected until I loaded the <code>eeprom</code> module (or was it the <code>ee1004</code> module?),</p>
+<pre><code>$ sudo modprobe eeprom</code></pre>
+<p>There are a few more modules one might want to <a href="https://superuser.com/a/1499521/724366">try</a>:</p>
 <pre><code>$ sudo modprobe eeprom
 $ sudo modprobe at24
 $ sudo modprobe i2c-i801
 $ sudo modprobe i2c-amd-mp2-pci
-$ sudo modprobe ee1004
-</code></pre>
-
+$ sudo modprobe ee1004</code></pre>
 <p>Oh, and CAS latency is usually reported in clock cycles.</p>
-
 <p>Good luck!</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>

@@ -67,17 +67,10 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2018-05-16</span></p>
 
-<h1>Compiling Evince on Archlinux</h1>
-
-<p>So, took me a while to figure out why <i>Evince</i> wouldn't compile.
-<tt>autogen.sh</tt> gave me an error:</p>
-
-<pre><code>error: HAVE_INTROSPECTION does not appear in AM_CONDITIONAL
-</code></pre>
-
-<p>To solve it, install the package <tt>gobject-introspectiron</tt>. Yes, you need
-that package even if you are compiling <i>Evince</i> without GObject
-introspectrion support.</p>
+<h1 id="compiling-evince-on-archlinux">Compiling Evince on Archlinux</h1>
+<p>So, took me a while to figure out why <i>Evince</i> wouldn’t compile. <tt>autogen.sh</tt> gave me an error:</p>
+<pre><code>error: HAVE_INTROSPECTION does not appear in AM_CONDITIONAL</code></pre>
+<p>To solve it, install the package <tt>gobject-introspectiron</tt>. Yes, you need that package even if you are compiling <i>Evince</i> without GObject introspectrion support.</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2018-05-16</span></p></footer>

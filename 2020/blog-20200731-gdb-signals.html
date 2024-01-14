@@ -67,22 +67,11 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2020-07-31</span></p>
 
-<h1>GDB signals</h1>
-
-<p>When debugging with <code>gdb</code>, not all signals are important enough to warrant
-stopping the program. For example, the X server establishes a pipe with a
-client, and when that client dies, the pipe may break before the X server got
-notice of the death of the client. In that case the X server receives a
-<code>SIGPIPE</code> signal, which should just be ignored.</p>
-
-<p>What exactly <code>gdb</code> should do with such a signal can be set with the <code>handle</code>
-command, e.g.,</p>
-
-<pre><code>gdb&gt; handle SIGPIPE nostop
-</code></pre>
-
-<p>That will tell <code>gdb</code> not to stop the program just because a client quit, and
-you can focus your attention on real problems.</p>
+<h1 id="gdb-signals">GDB signals</h1>
+<p>When debugging with <code>gdb</code>, not all signals are important enough to warrant stopping the program. For example, the X server establishes a pipe with a client, and when that client dies, the pipe may break before the X server got notice of the death of the client. In that case the X server receives a <code>SIGPIPE</code> signal, which should just be ignored.</p>
+<p>What exactly <code>gdb</code> should do with such a signal can be set with the <code>handle</code> command, e.g.,</p>
+<pre><code>gdb&gt; handle SIGPIPE nostop</code></pre>
+<p>That will tell <code>gdb</code> not to stop the program just because a client quit, and you can focus your attention on real problems.</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2020-07-31</span></p></footer>
