@@ -9,10 +9,10 @@ I got onto this train of thought as I was listening to the podcast [*Sold a Stor
 Take the set of equations
 
 $$
-\begin{align*}
+\begin{aligned}
 x &= 10 + y \,,\\
 y &= 6\,.
-\end{align*}
+\end{aligned}
 $$
 
 Usually, one would say that in order to calculate $x$, you should *substitute* the value for $y$ into the first equation. That is, you erase the $y$ and write $6$ in its place. Such is the operation performed. Thus, you get $x=10+6=16$.
@@ -39,4 +39,4 @@ $$
 
 That is, we explicitly express that, within the current context, *substituting* the number $6$ for $y$ is sufficient.
 
-Perhaps a philosophical difficulty could arise if $y$ is some small $\epsilon$ away from $6$, or $y=6+\epsilon$. As we take the limit $\epsilon\to0$, can we ever say we don't substitute?
+Perhaps a philosophical difficulty could arise if $y$ is some small $\epsilon$ away from $6,$ or $y=6+\epsilon$. As we take the limit $\epsilon\to0$, can we ever say we don't substitute?
