@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    @media (prefers-color-scheme: light) {
+        :root {
+            background: white;
+            color: #333;
+            --readmorecolor: blue;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited {
+            color: purple;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            background: #333;
+            color: white;
+            --readmorecolor: #74a0ff; /* light blue */
+        }
+        a:link {
+            color: #add8ff;  /* darker blue than lightblue */
+        }
+        a:visited {
+            color: #b695c0;  /* a light purple */
+        }
+    }
+    @media screen and (max-width: 55ch) {
+        :root {
+            width: 100vw-2ch;
+        }
+    }
+    html {
+        max-width: 55ch;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1ch;
+        padding-right: 1ch;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    footer {
+        padding-top: 1em;
+        bottom: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2024-01-24</span></p>
+
+<h1 id="dual-seat-xorg">Dual-Seat Xorg</h1>
+<p>With Wayland just around the corner, you may not want to hear about a cool <a href="https://www.x.org/">Xorg</a> feature. But it is so cool, hear me out. It needs the <code>XI2</code> extension, which you probably already have.</p>
+<p>On <code>X</code> you can create create two mouse pointers and two input keyboards, and these act independently from each other. Here is how: First, you create a virtual pair of <em>master</em> devices. Let’s call that pair “Virtual second”:</p>
+<pre><code>$ xinput --create-master &quot;Virtual second&quot;</code></pre>
+<p>Then, you need to give it devices that will make those inputs move. Run <code>xinput</code> to find out the IDs of the devices, then <em>reattach</em> the slaves to the <em>masters</em>. In my case the new master pointer is id=15 and the master keyboard is 16. The devices I want to attach are id=20 and id=22. So reattach them:</p>
+<pre><code>$ xinput --reattach 20 15
+$ xinput --reattach 22 16</code></pre>
+<p>Viola! Enjoy the double-editing!</p>
+<p>To tear it all down, remove the new masters:</p>
+<pre><code>$ xinput --remove-master 15 AttachToMaster 2 3</code></pre>
+<p>where we explicitly asked to reattach the devices to the old master pointer id=2 and master keyboard id=3.</p>
+
+<footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2024-01-24</span></p></footer>
+
+</body>
+
+
+</html>
