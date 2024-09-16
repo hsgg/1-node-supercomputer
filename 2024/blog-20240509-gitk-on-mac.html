@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    @media (prefers-color-scheme: light) {
+        :root {
+            background: white;
+            color: #333;
+            --readmorecolor: blue;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited {
+            color: purple;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            background: #222;
+            color: #ddd;
+            --readmorecolor: #74a0ff; /* light blue */
+        }
+        a:link {
+            color: #add8ff;  /* darker blue than lightblue */
+        }
+        a:visited {
+            color: #b695c0;  /* a light purple */
+        }
+    }
+    @media screen and (max-width: 55ch) {
+        :root {
+            width: 100vw-2ch;
+        }
+    }
+    html {
+        max-width: 55ch;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1ch;
+        padding-right: 1ch;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    footer {
+        padding-top: 1em;
+        bottom: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2024-05-09</span></p>
+
+<h1 id="gitk-on-macos">gitk on MacOS</h1>
+<p>Whenever <code>gitk</code> gets updated on my Mac, I get the
+following error:</p>
+<pre><code>% gitk
+2024-05-09 14:00:42.828 wish[3274:109555] ApplePersistence=NO
+Error in startup script: 2024-05-09 14:00:42.904 osascript[3282:109574] ApplePersistence=NO
+    while executing
+&quot;exec osascript -e [format {
+        tell application &quot;System Events&quot;
+            set frontmost of processes whose unix id is %d to true
+        end te...&quot;
+    invoked from within
+&quot;if {[tk windowingsystem] eq &quot;aqua&quot;} {
+    exec osascript -e [format {
+        tell application &quot;System Events&quot;
+            set frontmost of processes ...&quot;
+    (file &quot;/opt/homebrew/bin/gitk&quot; line 12321)</code></pre>
+<p>A <a href="%5ESolution">Solution</a> is to remove the following
+lines:</p>
+<pre><code># on OSX bring the current Wish process window to front
+if {[tk windowingsystem] eq &quot;aqua&quot;} {
+    exec osascript -e [format {
+        tell application &quot;System Events&quot;
+            set frontmost of processes whose unix id is %d to true
+        end tell
+    } [pid] ]
+}</code></pre>
+
+<footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2024-05-09</span></p></footer>
+
+</body>
+
+
+</html>

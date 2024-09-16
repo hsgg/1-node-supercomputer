@@ -101,6 +101,8 @@ mdfiles = [
         "../2023/blog-20231021-substitution.md",
         "../2024/blog-20240109-git-fast-forward.md",
         "../2024/blog-20240124-dual-seat-xorg.md",
+        "../2024/blog-20240126-the-main-dev-anti-pattern.md",
+        "../2024/blog-20240509-gitk-on-mac.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
