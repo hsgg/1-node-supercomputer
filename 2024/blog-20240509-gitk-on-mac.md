@@ -17,7 +17,7 @@ Whenever `gitk` gets updated on my Mac, I get the following error:
                 set frontmost of processes ..."
         (file "/opt/homebrew/bin/gitk" line 12321)
 
-A [Solution](^Solution) is to remove the following lines:
+A [Solution](https://stackoverflow.com/questions/56828880/running-gitk-leads-to-cryptic-error-message-on-macos-mojave) is to remove the following lines:
 
     # on OSX bring the current Wish process window to front
     if {[tk windowingsystem] eq "aqua"} {
@@ -27,6 +27,3 @@ A [Solution](^Solution) is to remove the following lines:
             end tell
         } [pid] ]
     }
-
-
-[^Solution]: https://stackoverflow.com/questions/56828880/running-gitk-leads-to-cryptic-error-message-on-macos-mojave
