@@ -13,3 +13,5 @@ In the case of `conda-lock`, architecture- and OS-dependent lists can be saved. 
 Then, to be updatable, one also needs a human-edited file that lists the required direct dependencies. Without this it becomes very hard to update as both direct and indirect dependencies can change. In Julia this is recorded in `Project.toml`, for Python there are several options - we use `environment.yaml`.
 
 Finally, by "developable" I mean the following. We want to be able to easily change a package. In Julia this is achieved by calling `Pkg.develop(pkgname)`. In conda there used to be `conda develop`, but that is deprecated, probably because conda doesn't just do Python anymore, and "develop" would need something very different depending on the package. However, Python has editable install via pip, which is what we use. It's not as convenient to develop any given package, but probably fine for us.
+
+In conclusion, we don't just want reproducible environments, we also want to be able to update them, and check out the git repo of any package and make changes.
