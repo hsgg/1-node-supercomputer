@@ -68,8 +68,9 @@
 <span style=float:right;>2024-10-03</span></p>
 
 <h1
-id="reproducible-updatable-and-developable-science-software">Reproducible,
-Updatable, and Developable Science Software</h1>
+id="reproducible-updatable-developable-and-independent-software-environments-for-science">Reproducible,
+Updatable, Developable, and Independent Software Environments for
+Science</h1>
 <p>Reproducible builds, reproducible environments, reproducible science:
 it’s all the rage. There are plenty solutions to the reproducibility
 problem: pip freeze, conda export, docker.</p>
@@ -77,7 +78,8 @@ problem: pip freeze, conda export, docker.</p>
 able to update our software and dependencies because of new features,
 bug fixes, or reductions in complexity. Further, we want as similar
 environments as possible on different CPU architectures and operating
-systems.</p>
+systems. Finally, we want different projects to have independent
+environments.</p>
 <p>The aforementioned solutions - pip freeze, conda export, and docker -
 fail at this, though they certainly can be (and are) a part of the
 solution.</p>
@@ -95,7 +97,7 @@ the required direct dependencies. Without this it becomes very hard to
 update as both direct and indirect dependencies can change. In Julia
 this is recorded in <code>Project.toml</code>, for Python there are
 several options - we use <code>environment.yaml</code>.</p>
-<p>Finally, by “developable” I mean the following. We want to be able to
+<p>Third, by “developable” I mean the following. We want to be able to
 easily change a package. In Julia this is achieved by calling
 <code>Pkg.develop(pkgname)</code>. In conda there used to be
 <code>conda develop</code>, but that is deprecated, probably because
@@ -103,10 +105,18 @@ conda doesn’t just do Python anymore, and “develop” would need something
 very different depending on the package. However, Python has editable
 install via pip, which is what we use. It’s not as convenient to develop
 any given package, but probably fine for us.</p>
+<p>Finally, if you have several projects, perhaps all using different
+versions of the same software packages, you want each project to have
+independent environments. One could even imagine nested environments,
+where each sub-environemnt could have a different version of the same
+package. However, unless you are making a Linux distribution, perhaps
+one by the name of Gitix, I fail to see the use case for such nested
+environments.</p>
 <p>In conclusion, we don’t just want reproducible environments, we also
-want to be able to update them, and check out the git repo<a href="#fn1"
+want to be able to update them, check out the git repo<a href="#fn1"
 class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> of
-any package and make changes.</p>
+any package and make changes, and we want to prevent different
+environments from stepping on each others’ toes.</p>
 <aside id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />

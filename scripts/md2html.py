@@ -103,6 +103,7 @@ mdfiles = [
         "../2024/blog-20240124-dual-seat-xorg.md",
         "../2024/blog-20240126-the-main-dev-anti-pattern.md",
         "../2024/blog-20240509-gitk-on-mac.md",
+        "../2024/blog-20241003-reproducible-and-updatable-science.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
