@@ -81,5 +81,5 @@ So with the [MPL](https://www.mozilla.org/en-US/MPL/), people can use the
 software as they see fit, and modifications need to be under the same license.
 
 Also, sometimes I am a big fan of oversimplification:
-[MPL = MIT + more robust legalese + reciprocity +
+[MPL/EUPL = MIT + more robust legalese + reciprocity +
 credit](https://discourse.julialang.org/t/package-licenses-contemplations-and-considerations/117922/9).
