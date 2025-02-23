@@ -29,13 +29,17 @@ Basically, I want the following for the projects I am currently thinking about:
 Other people and other projects may have different requirements. For example,
 Stefan Karpinski [made a good
 point](https://discourse.julialang.org/t/package-license/7109/15) that
-infrastructure-like software can get away with a less restrictive license than
+infrastructure-like software can get away with a more permissive license than
 an end-user product intended to be sold.
 
 The kinds of projects I am thinking about fall somewhere in-between. I don't
 expect the number of users to be very large, ever, so I am not concerned about
 monetization. On the other hand, I think it is far enough along the toolchain
 to warrant reciprocity. That is, that modifications can always be merged back.
+
+Reciprocity is also a matter of fairness. I share my code, and if someone else
+benefits from it makes modifications that I could benefit from as well, then I
+want those back. You taketh, you giveth.
 
 The rest of the points above are really just practical considerations.
 
