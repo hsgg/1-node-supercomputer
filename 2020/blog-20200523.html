@@ -67,22 +67,60 @@
 <p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2020-05-23</span></p>
 
-<h1 id="update-tribit-stormbox-firmware-on-linux-kinda">Update Tribit StormBox firmware on Linux, kinda</h1>
-<p>I got a <a href="https://www.tribitaudio.com/products/tribit-waterproof-bluetooth-speaker">Tribit StormBox</a>.</p>
+<h1 id="update-tribit-stormbox-firmware-on-linux-kinda">Update Tribit
+StormBox firmware on Linux, kinda</h1>
+<p>I got a <a
+href="https://www.tribitaudio.com/products/tribit-waterproof-bluetooth-speaker">Tribit
+StormBox</a>.</p>
 <p>Out-of-the-box, there is a large lag of the bluetooth audio.</p>
-<p>Tribit says to update the firmware on the speaker via USB. But, the only way they provide is to use their Windows program. What is a Linux user to do?</p>
+<p>Tribit says to update the firmware on the speaker via USB. But, the
+only way they provide is to use their Windows program. What is a Linux
+user to do?</p>
 <p>Cheat, of course!</p>
-<p>And, no, not by using wine, which I tried at first. But by running Windows in a virtual machine.</p>
-<p>But, first have a look at the USB interface that the StormBox exposes. We can see that the device exposes a manufacturer-defined interface with two bulk endpoints by issuing</p>
+<p>And, no, not by using wine, which I tried at first. But by running
+Windows in a virtual machine.</p>
+<p>But, first have a look at the USB interface that the StormBox
+exposes. We can see that the device exposes a manufacturer-defined
+interface with two bulk endpoints by issuing</p>
 <pre><code>$ lsusb -v -d 10d6:10d6</code></pre>
-<p>The hex numbers are the vendor and product ID of the StormBox. One of the endpoints is an input endpoint, the other an output. Sounds reasonable. Sounds reverse-engineerable.</p>
-<p>However, let’s not brick the brick. And to gather data, we need to update the firmware somehow anyway, right?</p>
-<p>Therefore, enter qemu, a program that allows you to run a VM. And Microsoft allows you to test Windows for a bit as long as you have or create a Microsoft account. (I first was looking into recovering the Windows product key from my Windows 10 disk image that I preserved before I put Linux on my laptop, but perhaps more luck with that some other time.)</p>
-<p>With going into the details, here is what I did. Basically, I followed the <a href="https://wiki.gentoo.org/wiki/QEMU/Windows_guest">Gentoo wiki</a> on creating a Windows hosting with QEMU. Get the virtio drivers from Fedora/Red Hat, and download a <a href="https://www.microsoft.com/en-us/software-download/windows10ISO">Windows installation ISO</a> from Microsoft. To make it work, I also needed to enable KVM in the BIOS of my laptop first.</p>
-<p>Then, pass-through the USB device to the VM with the vendor and product key as above, which was shown in the <a href="https://wiki.archlinux.org/index.php/QEMU#Pass-through_host_USB_device">Archlinux wiki</a> on QEMU. However, to run the VM as a normal user, I created a UDEV rule to change the OWNER and GROUP of the USB device, again see the <a href="https://wiki.archlinux.org/index.php/Udev#About_udev_rules">Arch wiki</a>.</p>
-<p>Finally, the VM can be started up, and the Media Tool provided by Tribit can be used to update the firmware. Boom, done! Audio still lags, but only maybe 0.2 seconds or so.</p>
-<p>Is audio lag a fundamental problem with bluetooth? Using the AUX cable input, there is no noticeable lag. So, it is definitely related to bluetooth. However, you would expect there to be some mechanism for a device to specify its lag, perhaps dynamically depending on interference. Does the bluetooth protocal allow that?</p>
-<p>Turns out, yes, it does. It is called A/V sync, and has been around for awhile. However, bluetooth 5.0 seems to fix some remaining issues with it.</p>
+<p>The hex numbers are the vendor and product ID of the StormBox. One of
+the endpoints is an input endpoint, the other an output. Sounds
+reasonable. Sounds reverse-engineerable.</p>
+<p>However, let’s not brick the brick. And to gather data, we need to
+update the firmware somehow anyway, right?</p>
+<p>Therefore, enter qemu, a program that allows you to run a VM. And
+Microsoft allows you to test Windows for a bit as long as you have or
+create a Microsoft account. (I first was looking into recovering the
+Windows product key from my Windows 10 disk image that I preserved
+before I put Linux on my laptop, but perhaps more luck with that some
+other time.)</p>
+<p>With going into the details, here is what I did. Basically, I
+followed the <a
+href="https://wiki.gentoo.org/wiki/QEMU/Windows_guest">Gentoo wiki</a>
+on creating a Windows hosting with QEMU. Get the virtio drivers from
+Fedora/Red Hat, and download a <a
+href="https://www.microsoft.com/en-us/software-download/windows10ISO">Windows
+installation ISO</a> from Microsoft. To make it work, I also needed to
+enable KVM in the BIOS of my laptop first.</p>
+<p>Then, pass-through the USB device to the VM with the vendor and
+product key as above, which was shown in the <a
+href="https://wiki.archlinux.org/index.php/QEMU#Pass-through_host_USB_device">Archlinux
+wiki</a> on QEMU. However, to run the VM as a normal user, I created a
+UDEV rule to change the OWNER and GROUP of the USB device, again see the
+<a
+href="https://wiki.archlinux.org/index.php/Udev#About_udev_rules">Arch
+wiki</a>.</p>
+<p>Finally, the VM can be started up, and the Media Tool provided by
+Tribit can be used to update the firmware. Boom, done! Audio still lags,
+but only maybe 0.2 seconds or so.</p>
+<p>Is audio lag a fundamental problem with bluetooth? Using the AUX
+cable input, there is no noticeable lag. So, it is definitely related to
+bluetooth. However, you would expect there to be some mechanism for a
+device to specify its lag, perhaps dynamically depending on
+interference. Does the bluetooth protocal allow that?</p>
+<p>Turns out, yes, it does. It is called A/V sync, and has been around
+for awhile. However, bluetooth 5.0 seems to fix some remaining issues
+with it.</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2020-05-23</span></p></footer>

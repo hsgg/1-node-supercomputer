@@ -68,12 +68,18 @@
 <span style=float:right;>2022-08-02</span></p>
 
 <h1 id="reduceoparr">reduce(op,arr)</h1>
-<p>I was trying to explain the concept of the function <a href="https://docs.julialang.org/en/v1/base/collections/#Base.reduce-Tuple%7BAny,%20Any%7D"><code>reduce(op,arr)</code></a> that takes an array <code>arr</code> and reduces it pairwise using the binary operator <code>op</code> until just one number is left.</p>
+<p>I was trying to explain the concept of the function <a
+href="https://docs.julialang.org/en/v1/base/collections/#Base.reduce-Tuple%7BAny,%20Any%7D"><code>reduce(op,arr)</code></a>
+that takes an array <code>arr</code> and reduces it pairwise using the
+binary operator <code>op</code> until just one number is left.</p>
 <p>For example, the <code>sum()</code> function can then be written</p>
 <pre><code>sum(arr) = reduce(+, arr)</code></pre>
-<p>To explain what <code>reduce()</code> does, I thought it would be nice to have a great graph, but I couldn’t find one online.</p>
-<p>Thus, I attempted to make one myself using <a href="https://github.com/pgf-tikz/pgf">Ti<em>k</em>Z</a>. I failed:</p>
-<p><a href="mapreduce/mapreduce.tex"><img src="mapreduce/mapreduce.svg" title="reduce(op,arr)" alt="reduce" /></a></p>
+<p>To explain what <code>reduce()</code> does, I thought it would be
+nice to have a great graph, but I couldn’t find one online.</p>
+<p>Thus, I attempted to make one myself using <a
+href="https://github.com/pgf-tikz/pgf">Ti<em>k</em>Z</a>. I failed:</p>
+<p><a href="mapreduce/mapreduce.tex"><img src="mapreduce/mapreduce.svg"
+title="reduce(op,arr)" alt="reduce" /></a></p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2022-08-02</span></p></footer>

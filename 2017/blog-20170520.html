@@ -68,11 +68,19 @@
 <span style=float:right;>2017-05-20</span></p>
 
 <h1 id="look-it-works">Look, it works!</h1>
-<p>So, here is my new and shiny webserver! It runs on a NanoPi NEO development board with the nginx webserver. I’m still figuring out how to configure it.</p>
-<p>Currently, the biggest problem is that whenever the DHCP lease expires, and the device gets a new one, it cannot set a route for the connection anymore. To debug it, I’ve written a udev rule to restart the board whenever I insert a USB stick from whatever the vendor and product IDs are.</p>
-<p>Well, actually, I’ve modified my script to just restart the network connection using network manager. Hopefully that will be sufficient.</p>
+<p>So, here is my new and shiny webserver! It runs on a NanoPi NEO
+development board with the nginx webserver. I’m still figuring out how
+to configure it.</p>
+<p>Currently, the biggest problem is that whenever the DHCP lease
+expires, and the device gets a new one, it cannot set a route for the
+connection anymore. To debug it, I’ve written a udev rule to restart the
+board whenever I insert a USB stick from whatever the vendor and product
+IDs are.</p>
+<p>Well, actually, I’ve modified my script to just restart the network
+connection using network manager. Hopefully that will be sufficient.</p>
 <p>The next lease renewal is due quarter to midnight. I can’t wait!</p>
-<p>So, yeah, restarting the network interface with <code>nmcli</code> is sufficient. Now, I should report the bug.</p>
+<p>So, yeah, restarting the network interface with <code>nmcli</code> is
+sufficient. Now, I should report the bug.</p>
 
 <footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
 <span style=float:right;>2017-05-20</span></p></footer>
