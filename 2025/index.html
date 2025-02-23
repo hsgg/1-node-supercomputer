@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    @media (prefers-color-scheme: light) {
+        :root {
+            background: white;
+            color: #333;
+            --readmorecolor: blue;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited {
+            color: purple;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            background: #222;
+            color: #ddd;
+            --readmorecolor: #74a0ff; /* light blue */
+        }
+        a:link {
+            color: #add8ff;  /* darker blue than lightblue */
+        }
+        a:visited {
+            color: #b695c0;  /* a light purple */
+        }
+    }
+    @media screen and (max-width: 55ch) {
+        :root {
+            width: 100vw-2ch;
+        }
+    }
+    html {
+        max-width: 55ch;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1ch;
+        padding-right: 1ch;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    footer {
+        padding-top: 1em;
+        bottom: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<h1 id="welcome-to-my-2-node-supercomputer">Welcome to my 2-node
+Supercomputer!</h1>
+<p>Nothing fancy here, yet. This is mostly for testing, learning how to
+run a server, and a space for my ramblings.</p>
+<p>And it isn’t really a 2-node thing anymore. But the name sticks.</p>
+
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="../2017/blog-20170520.html">2017-05-20: Look, it
+works!</a></li>
+<li><a href="../2017/blog-20170604.html">2017-06-04: Installing
+Mathematica 11 on Archlinux</a></li>
+<li><a href="../2017/blog-20170605.html">2017-06-05: Compiling
+Atlas-Lapack on Archlinux</a></li>
+<li><a href="../2017/blog-20170614.html">2017-06-14: Voting for our
+Colloquium Speaker Nomination</a></li>
+<li><a href="../2018/blog-20180101.html">2018-01-01: OpenWRT or LEDE?
+What’s up?</a></li>
+<li><a href="../2018/blog-20180118.html">2018-01-18: The
+Stetson-Harrison method</a></li>
+<li><a href="../2018/blog-20180326.html">2018-03-26: Using Apple’s
+SuperDrive with Archlinux</a></li>
+<li><a href="../2018/blog-20180516.html">2018-05-16: Compiling Evince on
+Archlinux</a></li>
+<li><a href="../2018/blog-20180601.html">2018-06-01: Parts List for
+Singer 327K Sewing Machine</a></li>
+<li><a href="../2018/blog-20181121.html">2018-11-21: Word-wise git diff,
+number-wise git diff</a></li>
+<li><a href="../2019/blog-20190324.html">2019-03-24: Fahrenheit to
+Celsius Converter</a></li>
+<li><a href="../2020/blog-20200426.html">2020-04-26: Setting up
+a2hosting</a></li>
+<li><a href="../2020/blog-20200523.html">2020-05-23: Update Tribit
+StormBox firmware on Linux, kinda</a></li>
+<li><a href="../2020/blog-20200531.html">2020-05-31: Julia’s Hermitian
+transpose operator</a></li>
+<li><a href="../2020/blog-20200621.html">2020-06-21: Taxes, taxes,
+taxes</a></li>
+<li><a href="../2020/blog-20200704.html">2020-07-04: Upgrading to Debian
+11 (bullseye)</a></li>
+<li><a
+href="../2020/blog-20200713-is-the-US-outspending-itself.html">2020-07-13:
+Is the US outspending itself?</a></li>
+<li><a
+href="../2026/blog-20200724-future-mars-boarding-pass.html">2020-07-24:
+My Mars boarding pass</a></li>
+<li><a href="../2020/blog-20200728-cpu-operation-costs.html">2020-07-28:
+CPU Operation Costs in Clock Cycles</a></li>
+<li><a href="../2020/blog-20200731-gdb-signals.html">2020-07-31: GDB
+signals</a></li>
+<li><a href="../2020/blog-20200809-read-more-see-all.html">2020-08-09:
+Read more</a></li>
+<li><a
+href="../2020/blog-20200810-googleplusdatalitigation.html">2020-08-10:
+Goolge+ Data Litigation</a></li>
+<li><a
+href="../2020/blog-20201025-campaign-fundraising.html">2020-10-25: 2020
+Campaign Fundraising</a></li>
+<li><a href="../2020/blog-20201114-evince-link-preview.html">2020-11-14:
+Evince 3.38 has Link Previews!</a></li>
+<li><a href="../2020/blog-20201211-dark-mode.html">2020-12-11: Dark Mode
+CSS</a></li>
+<li><a
+href="../2021/blog-20210324-my-spam-gets-more-attention.html">2021-03-24:
+My Spam gets more attention</a></li>
+<li><a
+href="../2021/blog-20210508-science-quantifies-uncertainty.html">2021-05-08:
+Science Quantifies Uncertainty</a></li>
+<li><a
+href="../2021/blog-20210611-matplotlib-imshow-none-nearest.html">2021-06-11:
+<code>none</code> vs <code>nearest</code> in Matplotlib’s
+imshow()</a></li>
+<li><a href="../2021/blog-20210614-escaping-the-bubble.html">2021-06-14:
+Escaping the Bubble</a></li>
+<li><a
+href="../2021/blog-20210717-housing-prices-as-a-proxy.html">2021-07-17:
+Are housing prices a proxy for poor infrastructure?</a></li>
+<li><a href="../2021/blog-20210805-Vaccines-vs-Covid.html">2021-08-05:
+Vaccines vs Covid</a></li>
+<li><a href="../2021/blog-20210810-artgerecht.html">2021-08-10: What’s
+<em>artgerecht</em> in English?</a></li>
+<li><a href="../2021/blog-20210827-ipv6.html">2021-08-27: IPv4/6 per
+km²</a></li>
+<li><a href="../2021/blog-20211029-optimize-for-signal.html">2021-10-29:
+Optimize for Signal</a></li>
+<li><a href="../2022/blog-20220202-forms.html">2022-02-02: Designing
+Your Career</a></li>
+<li><a href="../2022/blog-20220315-dst.html">2022-03-15: Daylight
+Wasting Time</a></li>
+<li><a href="../2022/blog-20220320-taxes.html">2022-03-20: Tax
+Preparation Incentives</a></li>
+<li><a href="../2022/blog-20220409-inflation-is-fair.html">2022-04-09:
+Inflation is Fair</a></li>
+<li><a
+href="../2022/blog-20220427-voter-suppression-vs-election-integrity.html">2022-04-27:
+Voter Suppression vs. Election Integrity</a></li>
+<li><a href="../2022/blog-20220507-mentoring-students.html">2022-05-07:
+Students</a></li>
+<li><a
+href="../2022/blog-20220508-hsr-texas-benefits-from-california.html">2022-05-08:
+Will Texas HSR benefit from California’s Investment?</a></li>
+<li><a href="../2022/blog-20220802-reduce.html">2022-08-02:
+reduce(op,arr)</a></li>
+<li><a
+href="../2022/blog-20220905-inflation-is-accurate.html">2022-09-05:
+Inflation is Needed for Accuracy</a></li>
+<li><a href="../2022/blog-20221029-zero-sum-vs-win-win.html">2022-10-29:
+R: zero-sum, D: win-win?</a></li>
+<li><a
+href="../2023/blog-20230103-closed-loop-hydro-storage.html">2023-01-03:
+Closed-loop Hydro</a></li>
+<li><a href="../2023/blog-20230108-bad-documentaries.html">2023-01-08:
+Most Documentaries are Bad</a></li>
+<li><a
+href="../2023/blog-20230119-worst-infographic-ever.html">2023-01-19:
+California High Speed Rail makes the Worst Info Graphic Ever</a></li>
+<li><a href="../2023/blog-20230315-inotifywait.html">2023-03-15:
+<code>inotifywait</code></a></li>
+<li><a href="../2023/blog-20230327-julias-update-mania.html">2023-03-27:
+Julia’s Update-Mania</a></li>
+<li><a
+href="../2023/blog-20230412-organic-tea-is-responsible-for-hunger.html">2023-04-12:
+Organic Tea drinkers exacerbate Sri Lankan hunger</a></li>
+<li><a
+href="../2023/blog-20230512-sodimm-speed-and-latency.html">2023-05-12:
+How to check SO-DIMM speed and latency on linux</a></li>
+<li><a href="../2023/blog-20231021-substitution.html">2023-10-21: No
+such thing as substitution in mathematics</a></li>
+<li><a href="../2024/blog-20240109-git-fast-forward.html">2024-01-09:
+Git: Fast-forward a branch without checking it out</a></li>
+<li><a href="../2024/blog-20240124-dual-seat-xorg.html">2024-01-24:
+Dual-Seat Xorg</a></li>
+<li><a
+href="../2024/blog-20240126-the-main-dev-anti-pattern.html">2024-01-26:
+The <code>dev</code> → <code>main</code> Development
+Anti-Pattern</a></li>
+<li><a href="../2024/blog-20240509-gitk-on-mac.html">2024-05-09: gitk on
+MacOS</a></li>
+<li><a
+href="../2024/blog-20241003-reproducible-and-updatable-science.html">2024-10-03:
+Reproducible, Updatable, Developable, and Independent Software
+Environments for Science</a></li>
+<li><a href="../2017/thingsnobodycaresaboutbutme.html">Random
+links</a></li>
+</ul>
+
+<footer><p style=text-align:center;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em></p></footer>
+
+</body>
+
+</html>
