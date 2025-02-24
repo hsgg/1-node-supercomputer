@@ -1,0 +1,29 @@
+2015-01-10
+
+
+Knauff, Nejasmic 2014.
+
+In this paper Knauff and Nejasmic measure the merits of using Word or LaTeX in
+different typesetting scenarios. The article seems to be rather biased towards
+Word. The data fairly clearly show that Word is more efficient for typesetting
+continous text and tables, whereas LaTeX is better suited for mathematical
+equations. They did not test creating graphics. There discussion as to what the
+causes are is also rather limited.
+
+I would be interested in a few more details. First, what is an error? They tell
+us which kinds of errors they tested for, but are not specific as to what they
+were looking for. Clearly the referee of this report didn't do his job. Second,
+what about the different editors used for LaTeX? How do people compile their
+document? What was their general strategy?
+
+What about other typesetting systems? LyX, or some version of Markdown?
+Libreoffice or OpenOffice? They clearly represent a different system. I'd be
+interested in those.
+
+I like the research they begin here. It is important, and should allow us to
+move towards a better document preparation system.
+
+One final thought. Microsoft word comes from a single company that presumably
+is creating a coherent whole. LaTeX on the other hand, is a heterogeneous
+collection packages and macros that have grown organically as the need arises.
+It seems some of the issues may be fixable.

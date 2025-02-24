@@ -1,0 +1,14 @@
+2009-08-31
+
+
+The Joy of C++ error messages.
+
+I have never been a great fan of C++. It always struck me as more than necessary or even desirable. Sure, you can do neat tricks with it, such as defining your operators. And, yes, string handling is certainly much simpler than in C.
+
+But today I have found the real problem with C++. It isn't the huge binaries produced by g++. It isn't the confusion with virtuals and inheritance. It isn't the ugliness or niceness (you decide) of having functions distinguished by the type of argument passed. It isn't even the level of inheritance some software projects create that is disturbing. And no, the STL isn't it either.
+
+In fact, nothing about the language itself is bad. No, the real culprit is in the error messages that g++ spits out. Those long and elaborate function identifications! Filling lines and lines with type specifications for the arguments. What pain it is to read those! Comparing endless strings again and again to find the difference. That's what makes coding in C++ a pain.
+
+All the features C++ adds to C cannot make up for this deficiency. I see no reason to use it. I see me squinting at the screen. I see nothing but pain.
+
+(Yeah, my knee hurts, too.)

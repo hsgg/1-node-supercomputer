@@ -1,0 +1,82 @@
+2009-05-10
+
+
+I have decided to start a blog.
+What a thing!
+The blog shall be about this and that, where this and that shall
+comprise things such as astronomy, computers, electronics, and physics,
+maybe other things.
+
+So for the first post, let's start reading the source code of "Plan 9
+from Bell Labs".
+
+First thing to look at, the kernel.
+Ah... too complicated...won't tell me anything.
+
+Okay, next object.
+The source for a command everyone knows: "ls.c".
+Nah - too long, let's see if we can find something simpler to start with.
+
+Oh, yes this one is right: "du.c".
+This shall be it.
+
+So I flip through the code thinking "What the hell am I to gain from
+this?"
+Then there is a small and simple looking function.
+One I can hope to understand on the first reading.
+No need to look up what "vlong", and friends mean!
+A function just right for the first introduction to source code reading
+without having an actual problem to solve.
+Ha!
+
+And the function is...
+
+void
+readfile(char *name)
+{
+        int n, fd = open(name, OREAD);
+
+        if(fd < 0) {
+                warn(name);
+                return;
+        }
+        while ((n = read(fd, readbuf, blocksize)) > 0)
+                continue;
+        if (n < 0)
+                warn(name);
+        close(fd);
+}
+
+What does it do?
+It reads a file and does nothing with the result.
+WTF?
+
+It gets called here:
+
+		if (readflg)
+			readfile(s_to_c(file));
+
+Ok - what about readflg?
+It gets set when you give "du" the "-r" option:
+
+	case 'r':
+                /* undocumented: just read & ignore every block of every file */
+                readflg = 1;
+                break;
+
+Aha!
+Great!
+Wonderful!
+Who would ever use that?
+
+Even if anybody would ever have a pressing need for such a thing, would
+he remember this option existed?
+
+So why could this option be of any use?
+I can actually think of a couple uses:
+
+	1.) Benchmarking!
+	2.) Read-ahead. Load files into cache for faster access later.
+
+What other uses could there be.
+Should one get rid of it?
