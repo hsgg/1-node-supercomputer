@@ -6,25 +6,24 @@ there.
 
 Basically, I want the following for the projects I am currently thinking about:
 
- 1. License popularity: If you choose a different license from everyone
-    else, you will make a lot of people
-    [grouchy](https://discourse.julialang.org/t/package-license/7109/4) and
-    annoyed. This is because different licenses will make it just that
-    little bit harder to share and change. For one, contributors will need
-    to become familiar with the new license.
-
- 2. Unrestricted usage: I want to allow the software to be used in any way
+ 1. Unrestricted usage: I want to allow the software to be used in any way
     people see fit. I don't want to limit how it is used, and I don't want
     to impose a license on their work either.
 
- 3. Reciprocity: If you take my code and modify it, I want to be able to
+ 2. Reciprocity: If you take my code and modify it, I want to be able to
     merge those modifications back.
 
- 4. Patent protection and limited liability: I don't want be held liable for
+ 3. Patent protection and limited liability: I don't want be held liable for
     anything, and both parties are protected from patent claims from each
     other.
 
- 5. Simplicity: I want it in one not-too-long file, readable in one sitting.
+ 4. Simplicity: I want it in one not-too-long file, readable in one sitting.
+    Simplicity also implies popularity: If you choose a different license from
+    everyone else, you will make a lot of people
+    [grouchy](https://discourse.julialang.org/t/package-license/7109/4) and
+    annoyed. This is because different licenses will make it just that little
+    bit harder to share and change. For one, contributors will need to become
+    familiar with the new license.
 
 Other people and other projects may have different requirements. For example,
 Stefan Karpinski [made a good
