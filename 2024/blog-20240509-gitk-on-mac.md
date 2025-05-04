@@ -1,5 +1,10 @@
 # gitk on MacOS
 
+`gitk` is a great way to visualize a git history. The main advantage over
+other, often better-looking alternatives is that is shows more history.
+
+It is in homebrew as `git-gui`.
+
 Whenever `gitk` gets updated on my Mac, I get the following error:
 
     % gitk
