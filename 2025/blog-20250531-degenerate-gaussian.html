@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome to my 2-node Supercomputer!</title>
+<style>
+    @media (prefers-color-scheme: light) {
+        :root {
+            background: white;
+            color: #333;
+            --readmorecolor: blue;
+        }
+        a:link {
+            color: blue;
+        }
+        a:visited {
+            color: purple;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            background: #222;
+            color: #ddd;
+            --readmorecolor: #74a0ff; /* light blue */
+        }
+        a:link {
+            color: #add8ff;  /* darker blue than lightblue */
+        }
+        a:visited {
+            color: #b695c0;  /* a light purple */
+        }
+    }
+    @media screen and (max-width: 55ch) {
+        :root {
+            width: 100vw-2ch;
+        }
+    }
+    html {
+        max-width: 55ch;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1ch;
+        padding-right: 1ch;
+        justify-content: center;
+    }
+    body {
+        text-align: justify;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+    footer {
+        padding-top: 1em;
+        bottom: 0;
+    }
+    h1 {
+        text-align: left;
+    }
+    pre {
+        margin: 0 4em;
+    }
+</style>
+</head>
+<!-- vim: set sw=4 sts=4 et : -->
+
+<body>
+<p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2025-05-31</span></p>
+
+<h1 id="the-degenerate-gaussian">The Degenerate Gaussian</h1>
+<figure>
+<img
+src="images/Carl_Friedrich_Gauss_as_a_degenerate_zombie_S159692935_St25_G7.5.jpeg"
+title="A degenerate Gauss" style="width:80.0%"
+alt="Not Gauss, created with EasyDiffusion" />
+<figcaption aria-hidden="true"><em><small>Not Gauss, created with
+EasyDiffusion</small></em></figcaption>
+</figure>
+<!-- ![degenerate_gauss](images/Carl_Friedrich_Gauss_as_a_degenerate_zombie_S1505275626_St25_G7.5.jpeg "A degenerate Gauss"){width=80%} -->
+<!-- ![degenerate_gauss](images/Carl_Friedrich_Gauss_as_a_degenerate_zombie_S3683621592_St25_G7.5.jpeg "A degenerate Gauss"){width=80%} -->
+<p>We often come across multivariate Gaussian distributions in which the
+covariance matrix is singular. This can happen, for example, when
+measuring a large number of variables (such as the Fourier modes of a
+density field) with a window function applied. The window function
+correlates the modes, reducing the number of degrees of freedom and
+giving a singular covariance matrix.</p>
+<p>We are considering a multivariate Gaussian of the form
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>d</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mo>det</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>2</mn><mi>π</mi><mi>C</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow></msqrt></mfrac><mspace width="0.167em"></mspace><msup><mi>e</mi><mrow><mi>−</mi><mfrac><mn>1</mn><mn>2</mn></mfrac><mspace width="0.167em"></mspace><msup><mi>d</mi><mi>T</mi></msup><msup><mi>C</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mi>d</mi></mrow></msup><mspace width="0.167em"></mspace><mo>,</mo></mrow><annotation encoding="application/x-tex">
+p(d) = \frac{1}{\sqrt{\det(2\pi C)}}\,e^{-\frac12\, d^T C^{-1} d}\,,
+</annotation></semantics></math> where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+is the data vector, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+is the covariance matrix. (We will not be so pedantic to insist on a
+notation that distinguishes between scalars, vectors, and matrices –
+there are so few, you will know the type of every variable.)</p>
+<p>The question is how to handle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>C</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">C^{-1}</annotation></semantics></math>
+when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+is singular?</p>
+<p>In such cases, statistics often recommends (but also discourages) the
+use of the <a
+href="https://en.wikipedia.org/wiki/Moore-Penrose_inverse">Moore-Penrose
+pseudo-inverse</a>. However, the Moore-Penrose pseudo-inverse expands
+the errorellipse to infinity in the nullspace of the covariance matrix
+when it should be collapsed to zero there.</p>
+<p>I will first argue that the correct procedure is to discard the
+nullspace of the covariance matrix, and then I will show that the
+Moore-Penrose pseudo-inverse instead does the opposite, and I will
+conclude with some closing thoughts that using the pseudo-inverse at
+worst gives more conservative constraints than the full likelihood.</p>
+<h2 id="a-simple-example">A simple example</h2>
+<p>Let’s consider a simple
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>-dimensional
+example, where the two variables are the same variable, let’s call it
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>.
+In that case our data vector is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><msub><mi>d</mi><mn>1</mn></msub><mo>,</mo><msub><mi>d</mi><mn>2</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">d=(d_1,d_2)</annotation></semantics></math>
+with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>=</mo><msub><mi>d</mi><mn>2</mn></msub><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">d_1=d_2=a</annotation></semantics></math>,
+and the covariance matrix is
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn><mo>+</mo><mi>ϵ</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.167em"></mspace><mo>,</mo></mrow><annotation encoding="application/x-tex">
+C = \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; 1 + \epsilon \end{pmatrix}\,,
+</annotation></semantics></math> with eigenvalues
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>ϵ</mi><mi>/</mi><mn>2</mn><mo>±</mo><msqrt><mrow><mn>1</mn><mo>+</mo><msup><mi>ϵ</mi><mn>2</mn></msup><mi>/</mi><mn>4</mn></mrow></msqrt><mspace width="0.167em"></mspace><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\lambda
+= 1 + \epsilon/2 \pm\sqrt{1 + \epsilon^2/4}\,,
+</annotation></semantics></math> which in the limit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon\to0</annotation></semantics></math>
+are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>2</mn><mo>+</mo><mi>ϵ</mi><mi>/</mi><mn>2</mn><mo>,</mo><mi>ϵ</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\lambda=2+\epsilon/2,\epsilon/2</annotation></semantics></math>.
+We have added a small
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon&gt;0</annotation></semantics></math>,
+because we want to explore the degenerate limit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon\to0</annotation></semantics></math>
+from above. (Note that we cannot explore it from below where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon&lt;0</annotation></semantics></math>,
+because then the matrix is no longer semi-positive definite.)</p>
+<p>The inverse is
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mfrac><mn>1</mn><mi>ϵ</mi></mfrac><mo>+</mo><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mfrac><mn>1</mn><mi>ϵ</mi></mfrac></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>−</mi><mfrac><mn>1</mn><mi>ϵ</mi></mfrac></mtd><mtd columnalign="center" style="text-align: center"><mfrac><mn>1</mn><mi>ϵ</mi></mfrac></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.167em"></mspace><mo>,</mo></mrow><annotation encoding="application/x-tex">
+C^{-1} = \begin{pmatrix} \frac{1}{\epsilon}+1 &amp; -\frac{1}{\epsilon} \\
+-\frac{1}{\epsilon} &amp; \frac{1}{\epsilon} \end{pmatrix}\,,
+</annotation></semantics></math> and it has eigenvalues
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>0.5</mn><mo>−</mo><mi>ϵ</mi><mo>,</mo><mn>2</mn><mi>/</mi><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\lambda=0.5-\epsilon,2/\epsilon</annotation></semantics></math>,
+in the limit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon\to0</annotation></semantics></math>.</p>
+<p>This makes sense: The near-zero eigenvalue gets a very large
+precision, but because of the large correlation in the off-diagonal
+terms, this just means the two variables
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mn>1</mn></msub><annotation encoding="application/x-tex">d_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mn>2</mn></msub><annotation encoding="application/x-tex">d_2</annotation></semantics></math>
+are tightly coupled to each other.</p>
+<p>The errorellipse looks as in the plot below. Here, we have plotted
+the 1-σ and 2-σ contours for two values of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>:</p>
+<p><a href="images/coveps.jl"><img src="images/coveps.png"
+title="coveps" style="width:100.0%" alt="coveps" /></a></p>
+<p>Because in the limit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon\to0</annotation></semantics></math>
+the probability density vanishes everywhere except when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>=</mo><msub><mi>d</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">d_1=d_2</annotation></semantics></math>,
+the 1-σ error ellipse is collapsed to a straight line from (-1,-1) to
+(1,1).</p>
+<h2 id="the-nondegenerate-subspace">The nondegenerate subspace</h2>
+<p>More generally, let’s say we have
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+variables, but only
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m&lt;n</annotation></semantics></math>
+degrees of freedom. That is, there are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n-m</annotation></semantics></math>
+linear combinations of the variables that are fully coupled to the other
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+linear combinations of the variables, and for the covariance matrix
+there are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n-m</annotation></semantics></math>
+eigenvalues that vanish.</p>
+<p>The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-dimensional
+error ellipse is now collapsed into an
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>-dimensional
+nondegenerate subspace.</p>
+<p>This subspace is spanned by the eigenvectors corresponding to the
+nonzero eigenvalues. We can project our data vector onto that subspace
+by forming a matrix from these nondegenerate eigenvectors. Further, we
+can also deproject back into the degenerate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-dimensional
+space with the transpose of that matrix.</p>
+<p>This procedure is quite similar to what is done for the Moore-Penrose
+pseudo-inverse. However, it avoids sending the zero eigenvalues to zero,
+instead avoiding the arising infinities by going to the nondegenerate
+subspace.</p>
+<h2 id="the-moore-penrose-pseudo-inverse">The Moore-Penrose
+pseudo-inverse</h2>
+<p>In the limit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon\to0</annotation></semantics></math>,
+the Moore-Penrose pseudo-inverse does not exist, since when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon=0</annotation></semantics></math>
+the pseudo-inverse is
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>+</mo></msup><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0.25</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0.25</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0.25</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0.25</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mspace width="0.167em"></mspace><mo>,</mo></mrow><annotation encoding="application/x-tex">
+C^+ = \begin{pmatrix} 0.25 &amp; 0.25 \\ 0.25 &amp; 0.25 \end{pmatrix}\,,
+</annotation></semantics></math> with eigenvalues
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>0.5</mn><mo>,</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda = 0.5, 0</annotation></semantics></math>.
+As opposed to taking the inverse, the zero eigenvalue did not get sent
+to infinity, but to zero.</p>
+<p>This means that instead of the two variables getting coupled, one of
+them remains unconstrained.</p>
+<p>One way to see this is that any vector proportional to the
+eigenvector with zero eigenvalue gets sent to the null-vector:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>C</mi><mo>+</mo></msup><mo>⋅</mo><msub><mi>v</mi><mn>0</mn></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">C^+\cdot v_0=(0,0)</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mn>0</mn></msub><annotation encoding="application/x-tex">v_0</annotation></semantics></math>
+is a vector proportional to that eigenvector.</p>
+<p>Therefore, changing that variable will always give the same
+probability density in the Gaussian, because
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>d</mi><mi>T</mi></msup><msup><mi>C</mi><mo>+</mo></msup><mi>d</mi><mo>=</mo><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi></mrow></mrow><annotation encoding="application/x-tex">d^T C^+ d = \mathrm{const}</annotation></semantics></math>
+in that case.</p>
+<p>To be a little more concrete, in the 2D case you can write out the
+probability density with the pseudo-inverse. You will find that the
+probability density does not change along any line where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>−</mo><msub><mi>d</mi><mn>2</mn></msub><mo>=</mo><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi></mrow></mrow><annotation encoding="application/x-tex">d_1 - d_2 = \mathrm{const}</annotation></semantics></math>;
+it only changes when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>+</mo><msub><mi>d</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">d_1+d_2</annotation></semantics></math>
+changes.</p>
+<p>So instead of collapsing one of the dimensions of the error ellipse,
+the Moore-Penrose pseudo-inverse expands it infinitely, as illustrated
+in the following figure:</p>
+<p><a href="images/coveps.jl"><img src="images/coveps_pinv.png"
+title="coveps_pinv" style="width:100.0%" alt="coveps_pinv" /></a></p>
+<p>That is not what we want.</p>
+<p>What we want is for the probability density to be a Gaussian along
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>+</mo><msub><mi>d</mi><mn>2</mn></msub><mo>=</mo><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi></mrow></mrow><annotation encoding="application/x-tex">d_1+d_2=\mathrm{const}</annotation></semantics></math>,
+and vanish otherwise. That, is we want a Dirac-delta along
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>2</mn></msub><mo>−</mo><msub><mi>d</mi><mn>1</mn></msub><mo>=</mo><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">n</mi><mi mathvariant="normal">s</mi><mi mathvariant="normal">t</mi></mrow></mrow><annotation encoding="application/x-tex">d_2-d_1=\mathrm{const}</annotation></semantics></math>.
+We could get that if
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>d</mi><mi>T</mi></msup><msup><mi>C</mi><mo>+</mo></msup><mi>d</mi></mrow><annotation encoding="application/x-tex">d^T C^+ d</annotation></semantics></math>
+were to send the zero eigenvalue to infinity everywhere except in one
+point – a sort of anti-Dirac delta function. The actual inverse is the
+thing that gives us that, and by projecting into the nondegenerate
+subspace we can avoid the numerical difficulties of dealing with
+infinities.</p>
+<h2 id="does-it-matter">Does it matter?</h2>
+<p>There are several things to consider when evaluating whether this
+matters or not. After all, we are rarely interested in the variables
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mn>1</mn></msub><annotation encoding="application/x-tex">d_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mn>2</mn></msub><annotation encoding="application/x-tex">d_2</annotation></semantics></math>,
+but rather in some set of parameters that depend on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mn>1</mn></msub><annotation encoding="application/x-tex">d_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>d</mi><mn>2</mn></msub><annotation encoding="application/x-tex">d_2</annotation></semantics></math>.
+Let’s call these the <em>parameters of interest</em>.</p>
+<p>In the first case, the parameters of interest might only depend on
+the nondegenerate subspace of the covariance matrix,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>+</mo><msub><mi>d</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">d_1 + d_2</annotation></semantics></math>
+in our example. In that case, the pseudo-inverse will give exactly the
+same probability distribution as the original likelihood.</p>
+<p>In the second case, the parameters of interest will depend on the
+nullspace as well. The resulting constraint might still be finite,
+however, either because the dependence on the nullspace is nonlinear and
+actually constrained, or perhaps we have a prior that constrains it.
+Otherwise, the constraints will be infinite.</p>
+<p>To conclude, in the best case, using the pseudo-inverse will give the
+same constraints on parameters as the actual likelihood, and in the
+worst case, the constraints will be much looser.</p>
+
+<footer><p style=text-align:left;><em><a href=http://2-node-supercomputer.net>2-node-supercomputer.net</a></em>
+<span style=float:right;>2025-05-31</span></p></footer>
+
+</body>
+
+
+</html>

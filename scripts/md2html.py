@@ -105,6 +105,7 @@ mdfiles = [
         "../2024/blog-20240509-gitk-on-mac.md",
         "../2024/blog-20241003-reproducible-and-updatable-science.md",
         "../2025/blog-20250223-choosing-a-license.md",
+        "../2025/blog-20250531-degenerate-gaussian.md",
         "../2017/thingsnobodycaresaboutbutme.md",
         ]
 
