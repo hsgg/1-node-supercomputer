@@ -113,12 +113,12 @@ What are the things that fill health for you?
 
 ### How is your balance?
 
-         |  |   |                                                                        |      |
--------- | - | - | ----------------------------------------------------------------------------- | ---------------------------
-*Love*   |   | EMPTY | <input type="range" min="0" max="100" value="0" id="love">   | FULL | <span id="love_out"></span>
-*Play*   |   | EMPTY | <input type="range" min="0" max="100" value="0" id="play">   | FULL | <span id="play_out"></span>
-*Work*   |   | EMPTY | <input type="range" min="0" max="100" value="0" id="work">   | FULL | <span id="work_out"></span>
-*Health* |   | EMPTY | <input type="range" min="0" max="100" value="0" id="health"> | FULL | <span id="health_out"></span>
+|          |       |                                                              |      |                               |
+| -------- | ----- | ------------------------------------------------------------ | ---- | ----------------------------- |
+| *Love*   | EMPTY | <input type="range" min="0" max="100" value="0" id="love">   | FULL | <span id="love_out"></span>   |
+| *Play*   | EMPTY | <input type="range" min="0" max="100" value="0" id="play">   | FULL | <span id="play_out"></span>   |
+| *Work*   | EMPTY | <input type="range" min="0" max="100" value="0" id="work">   | FULL | <span id="work_out"></span>   |
+| *Health* | EMPTY | <input type="range" min="0" max="100" value="0" id="health"> | FULL | <span id="health_out"></span> |
 
 
 ### Maintain your balance

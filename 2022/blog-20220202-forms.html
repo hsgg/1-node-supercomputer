@@ -150,16 +150,45 @@ What are the things that fill work for you? <br>
 What are the things that fill health for you? <br>
 <textarea id="healththings" rows="2" placeholder="Health."></textarea>
 <h3 id="how-is-your-balance">How is your balance?</h3>
-<pre><code>     |  |   |                                                                        |      |</code></pre>
-<p>——– | - | - | —————————————————————————– | ————————— <em>Love</em> |
-| EMPTY | <input type="range" min="0" max="100" value="0" id="love"> |
-FULL | <span id="love_out"></span> <em>Play</em> | | EMPTY |
-<input type="range" min="0" max="100" value="0" id="play"> | FULL |
-<span id="play_out"></span> <em>Work</em> | | EMPTY |
-<input type="range" min="0" max="100" value="0" id="work"> | FULL |
-<span id="work_out"></span> <em>Health</em> | | EMPTY |
-<input type="range" min="0" max="100" value="0" id="health"> | FULL |
-<span id="health_out"></span></p>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 4%" />
+<col style="width: 56%" />
+<col style="width: 3%" />
+<col style="width: 27%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><em>Love</em></td>
+<td>EMPTY</td>
+<td><input type="range" min="0" max="100" value="0" id="love"></td>
+<td>FULL</td>
+<td><span id="love_out"></span></td>
+</tr>
+<tr class="even">
+<td><em>Play</em></td>
+<td>EMPTY</td>
+<td><input type="range" min="0" max="100" value="0" id="play"></td>
+<td>FULL</td>
+<td><span id="play_out"></span></td>
+</tr>
+<tr class="odd">
+<td><em>Work</em></td>
+<td>EMPTY</td>
+<td><input type="range" min="0" max="100" value="0" id="work"></td>
+<td>FULL</td>
+<td><span id="work_out"></span></td>
+</tr>
+<tr class="even">
+<td><em>Health</em></td>
+<td>EMPTY</td>
+<td><input type="range" min="0" max="100" value="0" id="health"></td>
+<td>FULL</td>
+<td><span id="health_out"></span></td>
+</tr>
+</tbody>
+</table>
 <h3 id="maintain-your-balance">Maintain your balance</h3>
 <p>In order to maintain your balance in each of these areas, think about
 what you can do to improve your balance or to rebalance when things go
