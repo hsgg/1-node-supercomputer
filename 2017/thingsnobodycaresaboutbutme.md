@@ -33,3 +33,4 @@ haben!) Oder auch nicht. Vielleicht hilft mehr Suppe: <a href="https://super-phy
 <p><a href="https://scienceplusplus.org">The Science++ Project</a></p>
 <p><a href="https://www.youtube.com/shorts/0D290GHHuXE">Lebenslauf</a></p>
 <p><a href="view-source:https://christianheilmann.com/2023/08/18/adding-a-share-to-mastodon-link-to-any-web-site-and-here/">Beyond the Surface Lies Friendliness</a></p>
+<p><a href="view-source:https://aatishb.com/dissonance/">Dissonance</a></p>
