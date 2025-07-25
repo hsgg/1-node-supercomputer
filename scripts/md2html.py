@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import sys
 
 #import markdown2
 
@@ -36,7 +37,7 @@ def markdown_path(fname):
 
 
 
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 top = """<!DOCTYPE html>
 <html>
@@ -45,70 +46,6 @@ top = """<!DOCTYPE html>
 bottom = """
 </html>
 """
-
-mdfiles = [
-        "../2017/blog-20170520.md",
-        "../2017/blog-20170604.md",
-        "../2017/blog-20170605.md",
-        "../2017/blog-20170614.md",
-        "../2018/blog-20180101.md",
-        "../2018/blog-20180118.md",
-        "../2018/blog-20180326.md",
-        "../2018/blog-20180516.md",
-        "../2018/blog-20180601.md",
-        "../2018/blog-20181121.md",
-        "../2019/blog-20190324.md",
-        "../2020/blog-20200426.md",
-        "../2020/blog-20200523.md",
-        "../2020/blog-20200531.md",
-        "../2020/blog-20200621.md",
-        "../2020/blog-20200704.md",
-        "../2020/blog-20200713-is-the-US-outspending-itself.md",
-        "../2026/blog-20200724-future-mars-boarding-pass.md",
-        "../2020/blog-20200728-cpu-operation-costs.md",
-        "../2020/blog-20200731-gdb-signals.md",
-        "../2020/blog-20200809-read-more-see-all.md",
-        "../2020/blog-20200810-googleplusdatalitigation.md",
-        "../2020/blog-20201025-campaign-fundraising.md",
-        "../2020/blog-20201114-evince-link-preview.md",
-        "../2020/blog-20201211-dark-mode.md",
-        "../2021/blog-20210324-my-spam-gets-more-attention.md",
-        "../2021/blog-20210508-science-quantifies-uncertainty.md",
-        "../2021/blog-20210611-matplotlib-imshow-none-nearest.md",
-        "../2021/blog-20210614-escaping-the-bubble.md",
-        "../2021/blog-20210717-housing-prices-as-a-proxy.md",
-        "../2021/blog-20210805-Vaccines-vs-Covid.html",
-        "../2021/blog-20210810-artgerecht.md",
-        "../2021/blog-20210827-ipv6.md",
-        "../2021/blog-20211029-optimize-for-signal.md",
-        "../2022/blog-20220202-forms.md",
-        "../2022/blog-20220315-dst.md",
-        "../2022/blog-20220320-taxes.md",
-        "../2022/blog-20220409-inflation-is-fair.md",
-        "../2022/blog-20220427-voter-suppression-vs-election-integrity.md",
-        "../2022/blog-20220507-mentoring-students.md",
-        "../2022/blog-20220508-hsr-texas-benefits-from-california.md",
-        "../2022/blog-20220802-reduce.md",
-        "../2022/blog-20220905-inflation-is-accurate.md",
-        "../2022/blog-20221029-zero-sum-vs-win-win.md",
-        "../2023/blog-20230103-closed-loop-hydro-storage.md",
-        "../2023/blog-20230108-bad-documentaries.md",
-        "../2023/blog-20230119-worst-infographic-ever.md",
-        "../2023/blog-20230315-inotifywait.md",
-        "../2023/blog-20230327-julias-update-mania.md",
-        "../2023/blog-20230412-organic-tea-is-responsible-for-hunger.md",
-        "../2023/blog-20230512-sodimm-speed-and-latency.md",
-        "../2023/blog-20231021-substitution.md",
-        "../2024/blog-20240109-git-fast-forward.md",
-        "../2024/blog-20240124-dual-seat-xorg.md",
-        "../2024/blog-20240126-the-main-dev-anti-pattern.md",
-        "../2024/blog-20240509-gitk-on-mac.md",
-        "../2024/blog-20241003-reproducible-and-updatable-science.md",
-        "../2025/blog-20250223-choosing-a-license.md",
-        "../2025/blog-20250531-degenerate-gaussian.md",
-        "../2017/thingsnobodycaresaboutbutme.md",
-        ]
-
 
 def readfile(path):
     with open(path, "r") as f:
@@ -128,8 +65,9 @@ def readfirstline(path):
 
 
 def ismarkdownfile(fname):
+    exists = os.path.isfile(fname)
     ext = os.path.splitext(fname)[1]
-    return ext == ".md"
+    return ext == ".md" and exists
 
 
 def path_md2html(mdfile):
@@ -173,47 +111,50 @@ def encapsulate(env, content, **properties):
     return s
 
 
-def main():
-    head = readfile("snippets/head.html")
+def convert_single_file(mdfile):
+    if not ismarkdownfile(mdfile):
+        print(f"Nothing to convert: {mdfile}")
+        return
+    htmlfile = path_md2html(mdfile)
+    print("Converting", mdfile, "->", htmlfile, "...")
+    head = readfile(f"{script_dir}/snippets/head.html")
+    date = mdfile_date(mdfile)
+    date = encapsulate("span", date, style="float:right;")
+    home = encapsulate("a", "2-node-supercomputer.net", href="http://2-node-supercomputer.net")
+    home = encapsulate("em", home)
+    banner = encapsulate("p", home + "\n" + date, style="text-align:left;")
+    footer = encapsulate("footer", banner)
+    html = "\n".join([
+        top,
+        head,
+        "<body>",
+        banner + "\n",
+        markdown_path(mdfile),
+        footer + "\n",
+        "</body>\n",
+        bottom])
+    writefile(htmlfile, html)
 
-    # convert md files to html
-    for mdfile in mdfiles:
-        if not ismarkdownfile(mdfile):
-            continue
-        htmlfile = path_md2html(mdfile)
-        print("Converting", mdfile, "->", htmlfile, "...")
-        date = mdfile_date(mdfile)
-        date = encapsulate("span", date, style="float:right;")
-        home = encapsulate("a", "2-node-supercomputer.net", href="http://2-node-supercomputer.net")
-        home = encapsulate("em", home)
-        banner = encapsulate("p", home + "\n" + date, style="text-align:left;")
-        footer = encapsulate("footer", banner)
-        html = "\n".join([
-            top,
-            head,
-            "<body>",
-            banner + "\n",
-            markdown_path(mdfile),
-            footer + "\n",
-            "</body>\n",
-            bottom])
-        writefile(htmlfile, html)
 
-    # generate index.html
-    indexpre = markdown_path("../2025/index.md")
+def create_index(mdfile, mdfile_list):
+    htmlfile = path_md2html(mdfile)
+
+    print("Creating index", mdfile, "->", htmlfile, "...")
+
+    indexpre = markdown_path(mdfile)
     toc = "## Contents\n"
-    for mdfile in mdfiles:
-        if ismarkdownfile(mdfile):
-            htmlfile = path_md2html(mdfile)
-            title = mdfile_date(mdfile, ": ") + readfirstline(mdfile)[2:-1]
+    for blog_mdfile in mdfile_list:
+        blog_htmlfile = path_md2html(blog_mdfile)
+        if ismarkdownfile(blog_mdfile):
+            title = mdfile_date(blog_mdfile, ": ") + readfirstline(blog_mdfile)[2:-1]
         else:
-            htmlfile = mdfile
-            title = get_title_from_filename(htmlfile)
+            title = get_title_from_filename(blog_htmlfile)
         print(title)
-        if not os.path.exists(htmlfile):
-            raise FileNotFoundError(htmlfile)
-        toc += "\n  - [" + title + "](" + htmlfile + ")"
+        if not os.path.exists(blog_htmlfile):
+            raise FileNotFoundError(blog_htmlfile)
+        toc += "\n  - [" + title + "](../" + blog_htmlfile + ")"
 
+    head = readfile(f"{script_dir}/snippets/head.html")
     toc = markdown(toc)
     footer = encapsulate("a", "2-node-supercomputer.net", href="http://2-node-supercomputer.net")
     footer = encapsulate("em", footer)
@@ -228,6 +169,23 @@ def main():
         footer + "\n",
         "</body>",
         bottom])
-    writefile("../2025/index.html", html)
+
+    writefile(htmlfile, html)
+
+
+def main():
+    if sys.argv[1] == "-h":
+        print(f"Usage: {sys.argv[0]} [-i index.md] <file1.md> [file2.md...]")
+        return
+
+    if sys.argv[1] == "-i":
+        index_mdfile = sys.argv[2]
+        mdfile_list = sys.argv[3:]
+        create_index(index_mdfile, mdfile_list)
+        return
+
+    for mdfile in sys.argv[1:]:
+        convert_single_file(mdfile)
+
 
 main()
