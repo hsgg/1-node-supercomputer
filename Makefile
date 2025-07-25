@@ -64,7 +64,7 @@ BLOG_HTML_FILES += 2017/thingsnobodycaresaboutbutme.html
 
 BLOG_MD_FILES = $(subst .html,.md,$(BLOG_HTML_FILES))
 
-all: 2025/index.html $(BLOG_HTML_FILES)
+all: $(INDEX_HTML_FILE) $(BLOG_HTML_FILES)
 
 $(INDEX_HTML_FILE): $(INDEX_MD_FILE) $(BLOG_HTML_FILES) $(BLOG_MD_FILES)
 	@./scripts/md2html.py -i $< $(BLOG_MD_FILES)
@@ -73,5 +73,7 @@ $(INDEX_HTML_FILE): $(INDEX_MD_FILE) $(BLOG_HTML_FILES) $(BLOG_MD_FILES)
 	@./scripts/md2html.py $<
 
 
-# dependencies here:
+# Not everything is generated from a .md file. List them here.
+# Note: This approach leads to the index being rebuilt every time make is run.
+# I think that is OK.
 .PHONY: 2021/blog-20210805-Vaccines-vs-Covid.md

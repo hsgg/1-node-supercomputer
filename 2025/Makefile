@@ -1,7 +1,5 @@
-all: runscript
-
-runscript:
-	../scripts/md2html.py
+all:
+	$(MAKE) -C ..
 
 push:
 	../scripts/upload.sh
