@@ -24,6 +24,22 @@ Several things I was surprised students may need convincing:
    you only care about their correctness and maybe the performance. Only after
    switching into science mode, you work to get scientifically useful results.
 
+4. In another similar spirit as the previous point[^3], students tend to want
+   to model the full complexity all at once. I've certainly fallen into this
+   trap as well: always work with observed quantities, always do the full
+   redshift evolution, always incorporate redshift-space distortions, always
+   include this effect and that effect...
+
+   However, to gain understanding of the physics involved and how important
+   each effect is, each effect needs to be isolated. And that means, you need
+   to do a lot of simulations or calculations that do not include ALL of the
+   effects.
+
+   Indeed, in order to make progress and develop understanding, you generally
+   want to change just one thing at a time (which is hard to do when you do the
+   full modeling every time, because physical quantities tend to be
+   correlated).
+
 4. Students are hesitant to write anything before they know the full answer.
    OK, I'm not surprised by this. The written word carries some weight with it.
    However, if you are unsure, just state that in the notes. Writing notes
@@ -75,3 +91,4 @@ going, etc. But ultimately, the unkown is what is to be taught.
 
 [^1]: Most of this was written almost two years ago, but I found it and finally finished it in the form you see here.
 [^2]: Added 2022-09-05.
+[^3]: Added 2025-10-02.
