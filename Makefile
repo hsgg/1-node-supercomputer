@@ -1,4 +1,4 @@
-INDEX_HTML_FILE = 2025/index.html
+INDEX_HTML_FILE = 2026/index.html
 INDEX_MD_FILE = $(subst .html,.md,$(INDEX_HTML_FILE))
 
 BLOG_HTML_FILES += 2017/blog-20170520.html
