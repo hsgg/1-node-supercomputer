@@ -60,6 +60,7 @@ BLOG_HTML_FILES += 2024/blog-20240509-gitk-on-mac.html
 BLOG_HTML_FILES += 2024/blog-20241003-reproducible-and-updatable-science.html
 BLOG_HTML_FILES += 2025/blog-20250223-choosing-a-license.html
 BLOG_HTML_FILES += 2025/blog-20250531-degenerate-gaussian.html
+BLOG_HTML_FILES += 2026/blog-20260822-where-we-are-with-ai-coding.html
 BLOG_HTML_FILES += 2017/thingsnobodycaresaboutbutme.html
 
 BLOG_MD_FILES = $(subst .html,.md,$(BLOG_HTML_FILES))
